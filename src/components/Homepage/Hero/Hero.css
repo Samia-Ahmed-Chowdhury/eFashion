@@ -1,0 +1,15 @@
+.hero_bg {
+    background: linear-gradient(113deg, #FFE1E2 17.69%, #D7F0FF 104.79%);
+    position: relative;
+    /* height: 98vh; */
+    height: 100%;
+    width: 100%;
+    }
+    .hero_bg:after{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 66px;
+        content: ' ';
+        background-image: url('/images/Vector1.svg');
+    }
