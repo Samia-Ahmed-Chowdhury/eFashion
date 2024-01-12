@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <div className="hero_bg pb-6">
+    <div className="hero_bg pb-4">
       <Navbar />
 
       <section>

@@ -4,9 +4,9 @@ import './categories.css'
 
 function Categories() {
   return (
-    <>
+    <div className=" mx-5 lg:mx-auto max-w-6xl">
       <SelectionDiv />
-    </>
+    </div>
   );
 }
 
