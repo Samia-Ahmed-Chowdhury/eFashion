@@ -1,19 +1,4 @@
 /* toggle in label designing */
-/* .toggle_div {
-    border-radius: 55px;
-    background: #F9ECED;
-    color: #333;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 21.6px;
-    padding: 15px 50px;
-    display: inline;
-} */
-
-
-
 
 .switch {
     border-radius: 55px;
@@ -69,4 +54,24 @@ input {
 
 label {
     cursor: pointer;
+}
+
+
+/* categories btn design  */
+
+.categories_bg {
+    background: linear-gradient(118deg, rgba(255, 225, 226, 0.44) 30.35%, rgba(215, 240, 255, 0.44) 103.26%);
+}
+
+.catBtns {
+    border-radius: 20px 20px 0px 0px;
+    background: #FFF;
+    color: #333;
+    text-align: center;
+   
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.6px;
+    padding: 20px 50px;
 }
