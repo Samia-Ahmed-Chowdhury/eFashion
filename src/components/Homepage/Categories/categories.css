@@ -11,8 +11,6 @@
     line-height: 21.6px;
     padding: 0px 30px;
     gap: 15px;
-
-
     position: relative;
     height: 50px;
     display: inline-flex;
@@ -68,10 +66,12 @@ label {
     background: #FFF;
     color: #333;
     text-align: center;
-   
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 21.6px;
-    padding: 20px 50px;
+    width: 150px;
+    height: 65px;
+    flex-shrink: 0;
+    /* padding: 20px 50px; */
 }
