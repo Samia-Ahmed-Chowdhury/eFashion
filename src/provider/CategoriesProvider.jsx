@@ -1,58 +1,71 @@
-'use client'
+"use client";
 import { createContext, useEffect, useState } from "react";
 
 export const catBtnContext = createContext();
 
-function CategoriesProvider({children})  {
-    const [selectedOption, setSelectedOption] = useState("Women");
-    const [allProductData, setAllProductData] = useState([])
-    const [catWiseCards,setCatWiseCards]=useState([])
-  
+function CategoriesProvider({ children }) {
+  const [selectedOption, setSelectedOption] = useState("Women");
+  const [allProductData, setAllProductData] = useState([]);
+  const [catWiseCards, setCatWiseCards] = useState([]);
+  const [allCatProData, setAllCatProData] = useState([]);
 
-    useEffect(() => {
-        fetch('api/products')
-            .then(res => res.json())
-            .then(data => {
-                setAllProductData(data.products)
-            })
-    }, [])
+  useEffect(() => {
+    fetch("api/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllProductData(data.products);
+      });
+  }, []);
 
-    const handleSelectOption = (option) => {
-        setSelectedOption(option);
-        console.log("Selected:", option);
-      };
+  useEffect(()=>{
+    const d = allProductData.filter((datas) => {
+      return datas.category === selectedOption;
+    });
+    // console.log(d)
+    setAllCatProData(d)
+    setCatWiseCards(d)
+  },[selectedOption,allProductData])
 
+  const handleSelectOption = (option) => {
+    setSelectedOption(option);
+    // console.log("Selected:", option);
+  };
 
-      const showCards=(clickedBtn)=>{
-       const updateCards= allProductData.filter((cards)=>{
-           return cards.subCategory==clickedBtn
-        })
-        console.log(updateCards)
-      }
+  // const allCatProData = allProductData.filter((datas) => {
+  //   return datas.category === selectedOption;
+  // });
 
-      const btnList = ["All", ...new Set(allProductData.map((curElem) => {
+  const btnList = [
+    "All",
+    ...new Set(
+      allCatProData.map((curElem) => {
         return curElem.subCategory;
       })
     ),
   ];
 
-// const btnList = ["All", ...new Set(allProductData.filter((curSelectOp=>{
-//     const curCatCard=
-// }))
-// ),
-// ];
-     
-
-
-    const items={
-      selectedOption,handleSelectOption,allProductData, setAllProductData,catWiseCards,setCatWiseCards,showCards,
-      btnList
+  const showCardsHandler = (clickedBtn) => {
+    if (clickedBtn === "All") {
+      return setCatWiseCards(allCatProData);
     }
+    const updateCards = allCatProData.filter((cards) => {
+      return cards.subCategory == clickedBtn;
+    });
+    setCatWiseCards(updateCards);
+  };
+
+  const items = {
+    selectedOption,
+    handleSelectOption,
+    allProductData,
+    setAllProductData,
+    catWiseCards,
+    showCardsHandler,
+    btnList,
+  };
 
   return (
-    <catBtnContext.Provider value={items}>
-        {children}
-    </catBtnContext.Provider>
+    <catBtnContext.Provider value={items}>{children}</catBtnContext.Provider>
   );
 }
 

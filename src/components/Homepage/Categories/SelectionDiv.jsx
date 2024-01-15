@@ -5,7 +5,7 @@ import { catBtnContext } from "@/provider/CategoriesProvider";
 function SelectionDiv() {
 
   const {selectedOption,handleSelectOption}=useContext(catBtnContext)
-  console.log(selectedOption)
+  // console.log(selectedOption)
 
 
   return (

@@ -3,21 +3,15 @@ import React, { useContext } from "react";
 import { catBtnContext } from "@/provider/CategoriesProvider";
 
 function CatButtons() {
-  const { catWiseCards, setCatWiseCards, showCards, allProductData ,btnList} =useContext(catBtnContext);
-  console.log(catWiseCards);
-
-  // const btnList = ["All", ...new Set(allProductData.map((curElem) => {
-  //       return curElem.subCategory;
-  //     })
-  //   ),
-  // ];
+  const { showCardsHandler ,btnList} =useContext(catBtnContext);
+  // console.log(btnList);
 
   return (
-    <div className="mx-5 lg:mx-auto max-w-6xl space-x-5">
+    <div className=" mx-5 lg:mx-auto max-w-6xl space-x-5">
       {btnList.map((btn, index) => {
         return (
           <button
-            onClick={() => showCards(btn)}
+            onClick={() => showCardsHandler(btn)}
             key={index}
             className="catBtns"
           >
@@ -30,3 +24,4 @@ function CatButtons() {
 }
 
 export default CatButtons;
+

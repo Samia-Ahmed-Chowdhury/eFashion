@@ -75,3 +75,57 @@ label {
     flex-shrink: 0;
     /* padding: 20px 50px; */
 }
+
+.cat_cards {
+    /* width: 296.358px; */
+    /* height: 289px; */
+    padding: 17px 30px;
+    border-radius: 12px;
+    background: #FFF;
+}
+
+.swiper {
+    width: 100%;
+    height: 131px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    width: 100%;
+}
+
+.mySwiper {
+    box-sizing: border-box;
+    padding: 10px 0;
+    height: auto;
+}
+
+.mySwiper .swiper-slide {
+    width: 45px !important;
+    height: 45px;
+    opacity: 0.8;
+}
+
+.mySwiper .swiper-slide img {
+    border-radius: 9px;
+
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    border-radius: 9px;
+    border: 3px solid #F2575D;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
