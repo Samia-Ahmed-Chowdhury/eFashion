@@ -7,7 +7,7 @@ function CatButtons() {
   // console.log(btnList);
 
   return (
-    <div className=" mx-5 lg:mx-auto max-w-6xl space-x-5">
+    <div className="ml-5 md:ml-0 overflow-x-auto whitespace-nowrap lg:mx-auto max-w-6xl space-x-5">
       {btnList.map((btn, index) => {
         return (
           <button

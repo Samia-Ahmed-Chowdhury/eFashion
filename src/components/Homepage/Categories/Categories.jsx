@@ -4,6 +4,7 @@ import "./categories.css";
 import CatButtons from "./CatButtons";
 import CatCards from "./CatCards";
 
+
 function Categories() {
   return (
     <div className="mb-32 ">
