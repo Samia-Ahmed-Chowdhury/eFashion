@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from "react";
 
-function Card({ imgs }) {
+function ImgSlider({ imgs }) {
   
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState();
@@ -50,4 +50,4 @@ function Card({ imgs }) {
   );
 }
 
-export default Card;
+export default ImgSlider;
