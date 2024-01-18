@@ -12,8 +12,8 @@ const Slice = createSlice({
         addWishItem: (state, action) => {
             // console.log(action.payload)
             state.wishList.push(action.payload);
-            let userData = JSON.stringify(current(state.wishList));
-            localStorage.setItem("wishList", userData)
+            let itemData = JSON.stringify(current(state.wishList));
+            localStorage.setItem("wishList", itemData)
         },
         removeWishItem: (state, action) => {
             // console.log(action)
@@ -21,8 +21,8 @@ const Slice = createSlice({
                 return item._id !== action.payload
             })
             state.wishList = data;
-            let userData = JSON.stringify(data);
-            localStorage.setItem("wishList", userData)
+            let itemData = JSON.stringify(data);
+            localStorage.setItem("wishList", itemData)
 
         }
     },

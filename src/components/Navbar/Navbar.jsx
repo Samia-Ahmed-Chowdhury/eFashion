@@ -7,10 +7,10 @@ import Link from "next/link";
 
 function Navbar() {
   
-  const cartItem=0
   
   const wishedData = useSelector((data) => data.wishListData.wishList);
-  // console.log('nav===',wishedData.length);
+  const cartData = useSelector((data) => data.cartListData.cartList);
+  // console.log('nav===',cartData.length);
 
   return (
     <div className="navbar mx-auto max-w-6xl bg-transparent py-6">
@@ -98,6 +98,7 @@ function Navbar() {
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <Link href="/cartPage">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,19 +115,20 @@ function Navbar() {
                 />
               </svg>
            {
-            cartItem?   <span className="badge badge-sm indicator-item">8</span>:null
+            cartData.length?   <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">{cartData.length}</span>:null
            }
             </div>
+            </Link>
           </div>
           <div
             tabIndex={0}
-            className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+            className="mt-3 z-[1] card card-compact dropdown-content cart_dropdown w-52 bg-base-100 shadow"
           >
-            <div className="card-body">
-              <span className="font-bold text-lg">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
+            <div className="card-body ">
+              <span className="font-bold text-lg text-textC1">{ cartData.length} Items</span>
+              <span className="text-red-900">Subtotal: $999</span>
               <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+                <button className="my_button btn-block my-1">View cart</button>
               </div>
             </div>
           </div>

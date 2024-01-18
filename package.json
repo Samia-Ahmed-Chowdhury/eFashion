@@ -19,6 +19,7 @@
     "react-icons": "^4.8.0",
     "react-rating": "^2.0.5",
     "swiper": "^11.0.5",
+    "sweetalert2": "^11.7.5",
     "swiper-react": "^1.0.0"
   },
   "devDependencies": {

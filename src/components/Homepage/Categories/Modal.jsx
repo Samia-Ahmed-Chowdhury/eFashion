@@ -2,11 +2,36 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import ImgSlider from "./ImgSlider";
-import { PiArrowBendUpRightBold } from "react-icons/pi";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Rating from "react-rating";
+import { useDispatch, useSelector } from "react-redux";
+import { addCartItem } from "@/app/redux/slice/CartSlice";
+import Swal from "sweetalert2";
 
 function Modal({ isOpen, closeModal, item }) {
+  const cartData = useSelector((data) => data.cartListData.cartList);
+  console.log(cartData);
+
+  const dispatch = useDispatch();
+
+  const cartItemDispatch = (item) => {
+    const allowed = cartData.find((i) => i._id === item._id);
+    if (!allowed) {
+      dispatch(addCartItem(item)) &&
+        Swal.fire({
+          title: "Good job!",
+          text: "Added to Cart..!",
+          icon: "success",
+        });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Already added!",
+      });
+    }
+  };
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -169,7 +194,10 @@ function Modal({ isOpen, closeModal, item }) {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-end mt-3">
-                      <button className=" inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">
+                      <button
+                        onClick={() => cartItemDispatch(item)}
+                        className=" inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      >
                         Add To Cart
                       </button>
                       <button
