@@ -2,11 +2,15 @@
 
 import React from "react";
 import "./Navbar.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function Navbar() {
-
+  
   const wishedItem=0
   const cartItem=0
+  
+  const wishedData = useSelector((data) => data.wishListData.wishList);
+  console.log('nav===',wishedData.length);
 
   return (
     <div className="navbar mx-auto max-w-6xl bg-transparent py-6">
@@ -84,22 +88,11 @@ function Navbar() {
                 />
               </svg>
              {
-              wishedItem?  <span className="badge badge-sm indicator-item">8</span>:null
+              wishedData.length?  <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">{wishedData.length}</span>:null
              }
             </div>
           </div>
-          <div
-            tabIndex={0}
-            className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-          >
-            <div className="card-body">
-              <span className="font-bold text-lg">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
-              <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
-              </div>
-            </div>
-          </div>
+         
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

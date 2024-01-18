@@ -133,9 +133,9 @@ label {
     transition: all .5s linear;
     animation: heart_ani 3s linear infinite;
 }
-.actived_heart{
+/* .actived_heart{
     
-}
+} */
 /* .cat_cards:hover .heart {
   
 } */
