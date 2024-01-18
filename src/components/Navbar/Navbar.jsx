@@ -2,15 +2,15 @@
 
 import React from "react";
 import "./Navbar.css";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
+import Link from "next/link";
 
 function Navbar() {
   
-  const wishedItem=0
   const cartItem=0
   
   const wishedData = useSelector((data) => data.wishListData.wishList);
-  console.log('nav===',wishedData.length);
+  // console.log('nav===',wishedData.length);
 
   return (
     <div className="navbar mx-auto max-w-6xl bg-transparent py-6">
@@ -71,7 +71,8 @@ function Navbar() {
         </div>
         <div className="dropdown  dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
+           <Link href="/wishedPage">
+           <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -91,6 +92,7 @@ function Navbar() {
               wishedData.length?  <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">{wishedData.length}</span>:null
              }
             </div>
+           </Link>
           </div>
          
         </div>

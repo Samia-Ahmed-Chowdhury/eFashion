@@ -9,3 +9,22 @@ body {
 
 .my_button {
     @apply btn bg-[#F2575D] border-0 rounded-[8px] py-2 px-4 md:px-7 text-white text-[16px] md:text-lg capitalize font-medium}
+
+    .backIcon{
+      transition: all .5s linear;
+      animation: back_ani 3s linear infinite;
+    }
+
+    @keyframes back_ani {
+      0% {
+          transform: translateX(0px);
+      }
+  
+      50% {
+          transform: translateX(10px);
+      }
+  
+      100% {
+          transform: translateX(0px);
+      }
+  }
