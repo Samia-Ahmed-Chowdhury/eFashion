@@ -30,16 +30,6 @@ function SelectionDiv() {
         <label htmlFor="switch-radio3">Men</label>
 
       </div>
-
-
-
-
-
-      {/* <div className="toggle_div">
-        <span>Kids</span>
-        <span className="mx-14">Women</span>
-        <span>Men</span>
-      </div> */}
     </div>
   );
 }

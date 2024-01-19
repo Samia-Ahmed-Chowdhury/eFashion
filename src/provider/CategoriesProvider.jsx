@@ -8,6 +8,7 @@ function CategoriesProvider({ children }) {
   const [allProductData, setAllProductData] = useState([]);
   const [catWiseCards, setCatWiseCards] = useState([]);
   const [allCatProData, setAllCatProData] = useState([]);
+  const [cartSelectedImg, setCartSelectedImg] = useState("");
 
   useEffect(() => {
     fetch("api/products")
@@ -17,14 +18,14 @@ function CategoriesProvider({ children }) {
       });
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     const d = allProductData.filter((datas) => {
       return datas.category === selectedOption;
     });
     // console.log(d)
-    setAllCatProData(d)
-    setCatWiseCards(d)
-  },[selectedOption,allProductData])
+    setAllCatProData(d);
+    setCatWiseCards(d);
+  }, [selectedOption, allProductData]);
 
   const handleSelectOption = (option) => {
     setSelectedOption(option);
@@ -62,6 +63,8 @@ function CategoriesProvider({ children }) {
     catWiseCards,
     showCardsHandler,
     btnList,
+    cartSelectedImg,
+    setCartSelectedImg
   };
 
   return (

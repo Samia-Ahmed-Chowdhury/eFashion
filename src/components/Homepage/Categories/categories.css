@@ -184,3 +184,16 @@ label {
         transform: scale(.8, .8);
     }
 }
+
+/* ====
+-webkit-border-radius: 50px;
+border-radius: 50px;
+background: #ffffff;
+-webkit-box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
+box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
+
+
+background: #EEF0F4;
+border-radius: 100%;
+box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
+*/

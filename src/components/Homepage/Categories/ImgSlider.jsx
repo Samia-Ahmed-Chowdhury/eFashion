@@ -1,7 +1,10 @@
 'use client'
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState ,useContext } from "react";
+import { catBtnContext } from "@/provider/CategoriesProvider";
 
 function ImgSlider({ imgs }) {
+
+  const { setCartSelectedImg } = useContext(catBtnContext);
   
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState();
@@ -14,16 +17,18 @@ function ImgSlider({ imgs }) {
 
       setSelectedImageIndex(0);
       setSelectedImage(imgs[0]); // Set the initial selected image
+      setCartSelectedImg(imgs[0])
     }
   }, [imgs]);
 
   const handleSelectedImageChange = (newIdx) => {
     if (imgs && imgs.length > 0) {
       setSelectedImage(imgs[newIdx]);
+      setCartSelectedImg(imgs[newIdx]);
       setSelectedImageIndex(newIdx);
     }
   };
-
+// console.log('selectedImage===>',selectedImage)
   return (
     <div className="carousel-container">
       <div

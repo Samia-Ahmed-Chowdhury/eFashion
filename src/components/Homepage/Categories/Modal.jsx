@@ -1,6 +1,8 @@
 "use client";
+import React, { useContext, useState } from "react";
+import { catBtnContext } from "@/provider/CategoriesProvider";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import ImgSlider from "./ImgSlider";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Rating from "react-rating";
@@ -9,15 +11,23 @@ import { addCartItem } from "@/app/redux/slice/CartSlice";
 import Swal from "sweetalert2";
 
 function Modal({ isOpen, closeModal, item }) {
+
+  const { cartSelectedImg } = useContext(catBtnContext);
+
   const cartData = useSelector((data) => data.cartListData.cartList);
-  console.log(cartData);
+  // console.log(cartData);
 
   const dispatch = useDispatch();
 
   const cartItemDispatch = (item) => {
     const allowed = cartData.find((i) => i._id === item._id);
+    
     if (!allowed) {
-      dispatch(addCartItem(item)) &&
+      const {_id,category,subCategory,price,rating,details}=item;
+      const newItem={_id,category,subCategory,price,rating,details,img:cartSelectedImg}
+      // console.log(newItem)
+
+      dispatch(addCartItem(newItem)) &&
         Swal.fire({
           title: "Good job!",
           text: "Added to Cart..!",
