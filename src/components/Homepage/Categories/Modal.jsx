@@ -20,11 +20,12 @@ function Modal({ isOpen, closeModal, item }) {
   const dispatch = useDispatch();
 
   const cartItemDispatch = (item) => {
-    const allowed = cartData.find((i) => i._id === item._id);
+    // console.log(item,cartSelectedImg)
+    const allowed = cartData.find((i) => i._id === item._id && i.img===cartSelectedImg);
     
     if (!allowed) {
       const {_id,category,subCategory,price,rating,details}=item;
-      const newItem={_id,category,subCategory,price,rating,details,img:cartSelectedImg}
+      const newItem={_id,category,subCategory,price,rating,details,img:cartSelectedImg,quantity:1}
       // console.log(newItem)
 
       dispatch(addCartItem(newItem)) &&

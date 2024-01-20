@@ -1,11 +1,8 @@
 "use client";
-import ImgSlider from "@/components/Homepage/Categories/ImgSlider";
 import Navbar from "@/components/Navbar/Navbar";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { PiArrowBendUpRightBold, PiArrowFatLineLeftFill } from "react-icons/pi";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import Rating from "react-rating";
+import {  useSelector } from "react-redux";
+import {  PiArrowFatLineLeftFill } from "react-icons/pi";
 import Modal from "@/components/Homepage/Categories/Modal";
 import "@/components/Homepage/Categories/categories.css";
 import { useRouter } from "next/navigation";
@@ -15,12 +12,6 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 
 function page() {
   const cartData = useSelector((data) => data.cartListData.cartList);
-
-  const dispatch = useDispatch();
-
-  const wishItemDispatch = (item) => {
-    dispatch(removeWishItem(item._id));
-  };
 
   let [isOpen, setIsOpen] = useState(false);
   let [item, setItem] = useState({});
@@ -62,8 +53,8 @@ function page() {
       <div className="my-6 mx-5 lg:mx-auto max-w-6xl grid grid-cols-1  md:grid-cols-[1fr,.3fr] justify-between gap-14">
         <div className="cart_part ">
           <Scrollbars className="cart-items-container">
-            {cartData.map((item) => {
-              return <CartCard key={item._id} item={item} />;
+            {cartData.map((item,index) => {
+              return <CartCard key={index} item={item} />;
             })}
           </Scrollbars>
         </div>
