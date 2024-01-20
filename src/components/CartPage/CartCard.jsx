@@ -2,18 +2,19 @@
 import React from "react";
 import "./CartPage.css";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { IoIosRemove, IoMdAdd, IoMdTrash } from "react-icons/io";
-import { updateCartItem } from "@/app/redux/slice/CartSlice";
+import { removeCartItem, updateCartItem } from "@/app/redux/slice/CartSlice";
 
 function CartCard({ item }) {
-
-  const cartData = useSelector((data) => data.cartListData.cartList);
 
   const dispatch = useDispatch();
 
   const ItemHandler = ({item,type}) => {
       dispatch(updateCartItem({item,type}))
+  };
+  const delItemHandler = (item) => {
+      dispatch(removeCartItem(item))
   };
 
   return (
@@ -62,12 +63,12 @@ function CartCard({ item }) {
 
         <div className="">
           <h5 className="text-xl font-black text-black text-center">
-            {item.price}
+            {item.price*item.quantity}
           </h5>
           {/* <h5>{count > 0 ? price * count : price}</h5> */}
         </div>
         <div className="flex justify-center">
-          <IoMdTrash className="del" />
+          <IoMdTrash className="del cursor-pointer" onClick={() => delItemHandler(item)} />
         </div>
       </div>
     </>

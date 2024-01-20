@@ -25,7 +25,7 @@ function Modal({ isOpen, closeModal, item }) {
     
     if (!allowed) {
       const {_id,category,subCategory,price,rating,details}=item;
-      const newItem={_id,category,subCategory,price,rating,details,img:cartSelectedImg,quantity:1}
+      const newItem={_id,category,subCategory,price:parseFloat(price),rating,details,img:cartSelectedImg,quantity:1}
       // console.log(newItem)
 
       dispatch(addCartItem(newItem)) &&

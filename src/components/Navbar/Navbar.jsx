@@ -2,15 +2,20 @@
 
 import React from "react";
 import "./Navbar.css";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Link from "next/link";
 
 function Navbar() {
-  
-  
   const wishedData = useSelector((data) => data.wishListData.wishList);
   const cartData = useSelector((data) => data.cartListData.cartList);
-  // console.log('nav===',cartData.length);
+
+  const totalItem = cartData.reduce((previousValue, currentValue) => {
+    return previousValue +  currentValue.quantity;
+  }, 0);
+
+  const totalAmount = cartData.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.price * currentValue.quantity;
+  }, 0);
 
   return (
     <div className="navbar mx-auto max-w-6xl bg-transparent py-6">
@@ -35,26 +40,25 @@ function Navbar() {
         </a>
       </div>
       <div className="flex-none">
-       
         <div className="dropdown  dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-          <div className="indictor">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M21 21L15 15L21 21ZM17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10Z"
-              stroke="#333333"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+            <div className="indictor">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 21L15 15L21 21ZM17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10Z"
+                  stroke="#333333"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
           <div
             tabIndex={0}
@@ -71,34 +75,34 @@ function Navbar() {
         </div>
         <div className="dropdown  dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-           <Link href="/wishedPage">
-           <div className="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M4.31804 6.31804C3.90017 6.7359 3.5687 7.23198 3.34255 7.77795C3.1164 8.32392 3 8.90909 3 9.50004C3 10.091 3.1164 10.6762 3.34255 11.2221C3.5687 11.7681 3.90017 12.2642 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.50004C21.0001 8.30656 20.526 7.16196 19.682 6.31804C18.8381 5.47412 17.6935 5.00001 16.5 5.00001C15.3066 5.00001 14.162 5.47412 13.318 6.31804L12 7.63604L10.682 6.31804C10.2642 5.90017 9.7681 5.5687 9.22213 5.34255C8.67616 5.1164 8.09099 5 7.50004 5C6.90909 5 6.32392 5.1164 5.77795 5.34255C5.23198 5.5687 4.7359 5.90017 4.31804 6.31804V6.31804Z"
-                  stroke="#333333"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-             {
-              wishedData.length?  <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">{wishedData.length}</span>:null
-             }
-            </div>
-           </Link>
+            <Link href="/wishedPage">
+              <div className="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M4.31804 6.31804C3.90017 6.7359 3.5687 7.23198 3.34255 7.77795C3.1164 8.32392 3 8.90909 3 9.50004C3 10.091 3.1164 10.6762 3.34255 11.2221C3.5687 11.7681 3.90017 12.2642 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.50004C21.0001 8.30656 20.526 7.16196 19.682 6.31804C18.8381 5.47412 17.6935 5.00001 16.5 5.00001C15.3066 5.00001 14.162 5.47412 13.318 6.31804L12 7.63604L10.682 6.31804C10.2642 5.90017 9.7681 5.5687 9.22213 5.34255C8.67616 5.1164 8.09099 5 7.50004 5C6.90909 5 6.32392 5.1164 5.77795 5.34255C5.23198 5.5687 4.7359 5.90017 4.31804 6.31804V6.31804Z"
+                    stroke="#333333"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {wishedData.length ? (
+                  <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">
+                    {wishedData.length}
+                  </span>
+                ) : null}
+              </div>
+            </Link>
           </div>
-         
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-          <Link href="/cartPage">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,44 +118,51 @@ function Navbar() {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-           {
-            cartData.length?   <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">{cartData.length}</span>:null
-           }
+              {cartData.length ? (
+                <span className="badge bg-[#F2575D] border-0 text-white badge-sm indicator-item">
+                  {totalItem}
+                </span>
+              ) : null}
             </div>
-            </Link>
           </div>
           <div
             tabIndex={0}
             className="mt-3 z-[1] card card-compact dropdown-content cart_dropdown w-52 bg-base-100 shadow"
           >
             <div className="card-body ">
-              <span className="font-bold text-lg text-textC1">{ cartData.length} Items</span>
-              <span className="text-red-900">Subtotal: $999</span>
+              <span className="font-bold text-lg text-textC1">
+                {totalItem} Items
+              </span>
+              <span className="text-red-900">Total Amount: ${totalAmount&&totalAmount}</span>
               <div className="card-actions">
-                <button className="my_button btn-block my-1">View cart</button>
+                <Link href="/cartPage">
+                  <button className="my_button btn-block my-1">
+                    View cart
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-          <div className="indicator">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M16 7C16 8.06087 15.5786 9.07828 14.8284 9.82843C14.0783 10.5786 13.0609 11 12 11C10.9391 11 9.92172 10.5786 9.17157 9.82843C8.42143 9.07828 8 8.06087 8 7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V7ZM12 14C10.1435 14 8.36301 14.7375 7.05025 16.0503C5.7375 17.363 5 19.1435 5 21H19C19 19.1435 18.2625 17.363 16.9497 16.0503C15.637 14.7375 13.8565 14 12 14V14Z"
-              stroke="#333333"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+            <div className="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M16 7C16 8.06087 15.5786 9.07828 14.8284 9.82843C14.0783 10.5786 13.0609 11 12 11C10.9391 11 9.92172 10.5786 9.17157 9.82843C8.42143 9.07828 8 8.06087 8 7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V7ZM12 14C10.1435 14 8.36301 14.7375 7.05025 16.0503C5.7375 17.363 5 19.1435 5 21H19C19 19.1435 18.2625 17.363 16.9497 16.0503C15.637 14.7375 13.8565 14 12 14V14Z"
+                  stroke="#333333"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
           <div
             tabIndex={0}
@@ -166,8 +177,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-
-      
       </div>
     </div>
   );

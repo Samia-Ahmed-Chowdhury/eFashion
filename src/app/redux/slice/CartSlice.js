@@ -1,5 +1,6 @@
 'use client'
 import { createSlice, current } from "@reduxjs/toolkit"
+import Swal from "sweetalert2";
 
 const initialState = {
     cartList: JSON.parse(localStorage.getItem("cartList")) ? JSON.parse(localStorage.getItem("cartList")) : []
@@ -16,13 +17,18 @@ const Slice = createSlice({
             localStorage.setItem("cartList", itemData)
         },
         removeCartItem: (state, action) => {
-            // console.log(action)
+            console.log(action.payload._id)
             const data = state.cartList.filter((item) => {
-                return item._id !== action.payload
+                return item.img !== action.payload.img
             })
             state.cartList = data;
             let itemData = JSON.stringify(data);
             localStorage.setItem("cartList", itemData)
+
+        },
+        removeAllCartItem: (state) => {
+            state.cartList = []
+            localStorage.removeItem('cartList');
 
         },
         updateCartItem: (state, action) => {
@@ -37,7 +43,16 @@ const Slice = createSlice({
                 data.quantity = data.quantity + 1
             }
             else if (data && action.payload.type == 'decrement') {
-                data.quantity = data.quantity - 1
+                if (data.quantity > 1) {
+                    data.quantity = data.quantity - 1
+                }
+                else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Negtive not allowed!",
+                    });
+                }
             }
             // console.log('updated', current(state))
             let itemData = JSON.stringify(current(state.cartList));
@@ -47,5 +62,5 @@ const Slice = createSlice({
 
 });
 
-export const { addCartItem, removeCartItem, updateCartItem } = Slice.actions;
+export const { addCartItem, removeCartItem, updateCartItem ,removeAllCartItem} = Slice.actions;
 export default Slice.reducer;
