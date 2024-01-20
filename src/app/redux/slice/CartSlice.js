@@ -26,15 +26,20 @@ const Slice = createSlice({
 
         },
         updateCartItem: (state, action) => {
+            // console.log(action.payload.type)
             const data = state.cartList.find((item) => {
-                return item._id === action.payload._id && item.img === action.payload.img
+                return item._id === action.payload.item._id && item.img === action.payload.item.img
 
             })
-            console.log(current(data))
-            if (data) {
+            // console.log(current(data))
+
+            if (data && action.payload.type == 'increment') {
                 data.quantity = data.quantity + 1
             }
-            console.log('updated', current(state))
+            else if (data && action.payload.type == 'decrement') {
+                data.quantity = data.quantity - 1
+            }
+            // console.log('updated', current(state))
             let itemData = JSON.stringify(current(state.cartList));
             localStorage.setItem("cartList", itemData)
         },

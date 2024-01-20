@@ -12,8 +12,8 @@ function CartCard({ item }) {
 
   const dispatch = useDispatch();
 
-  const ItemHandler = (item) => {
-      dispatch(updateCartItem(item))
+  const ItemHandler = ({item,type}) => {
+      dispatch(updateCartItem({item,type}))
   };
 
   return (
@@ -46,14 +46,14 @@ function CartCard({ item }) {
           >
             <button
               className="subtract cursor-pointer"
-              // onClick={() => ItemHandler({item,type:'decrement'})}
+              onClick={() => ItemHandler({item,type:'decrement'})}
             >
               <IoIosRemove />
             </button>
             <h2 className="text-xl font-bold text-black">{item.quantity}</h2>
             <button
               className="add cursor-pointer"
-              onClick={() => ItemHandler(item)}
+              onClick={() => ItemHandler({item,type:'increment'})}
             >
               <IoMdAdd />
             </button>
