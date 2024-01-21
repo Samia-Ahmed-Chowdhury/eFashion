@@ -31,7 +31,7 @@ function Page() {
       <div className="grid md:grid-cols-[.9fr,1fr] gap-10 pt-2 lg:mx-16 mx-5">
         <div>
           <p className="text-lg font-bold text-center text-primaryColor">
-            Login With Social :{" "}
+            Login With Social :
           </p>
           <SocialSystem />
           <div className="w-full">

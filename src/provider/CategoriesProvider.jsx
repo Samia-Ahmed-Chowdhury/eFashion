@@ -9,6 +9,7 @@ function CategoriesProvider({ children }) {
   const [catWiseCards, setCatWiseCards] = useState([]);
   const [allCatProData, setAllCatProData] = useState([]);
   const [cartSelectedImg, setCartSelectedImg] = useState("");
+  const [catBtn_active, setCatBtn_active] = useState("All");
 
   useEffect(() => {
     fetch("api/products")
@@ -45,6 +46,12 @@ function CategoriesProvider({ children }) {
     ),
   ];
 
+  const CatbtnClickHandler = (btn) => {
+    setCatBtn_active(btn);
+    showCardsHandler(btn);
+  };
+
+
   const showCardsHandler = (clickedBtn) => {
     if (clickedBtn === "All") {
       return setCatWiseCards(allCatProData);
@@ -55,6 +62,7 @@ function CategoriesProvider({ children }) {
     setCatWiseCards(updateCards);
   };
 
+ 
   const items = {
     selectedOption,
     handleSelectOption,
@@ -64,7 +72,9 @@ function CategoriesProvider({ children }) {
     showCardsHandler,
     btnList,
     cartSelectedImg,
-    setCartSelectedImg
+    setCartSelectedImg,
+    catBtn_active,
+    setCatBtn_active,CatbtnClickHandler
   };
 
   return (

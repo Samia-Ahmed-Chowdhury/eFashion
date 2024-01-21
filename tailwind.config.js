@@ -11,6 +11,8 @@ module.exports = {
       colors: {
        textC1: '#333333',
        textC9: '#776C6C',
+       mainColor:'#F2575D',
+       sideColor:'#B0D0E3'
 
       },
 

@@ -1,0 +1,144 @@
+.rightArrow {
+    font-size: 2.5rem;
+    transform: rotate(90deg);
+    transition: all .5s linear;
+    animation: arrow_ani 3s linear infinite;
+}
+
+@keyframes arrow_ani {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(15px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+
+
+.next_gen_btn {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.next_gen_btn span {
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 4px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 0px -5px 4px 0px rgba(242, 242, 242, 0.25) inset, -4px -4px 4px 0px rgba(237, 217, 217, 0.25) inset;
+   font-size: 14px;
+    color: black;
+    padding: 5px 20px;
+}
+
+.next_gen_btn::before {
+    content: '';
+    position: absolute;
+    width: 5.5rem;
+    left: -75%;
+    top: 50%;
+    height: 0.0625rem;
+    flex-shrink: 0;
+    background: linear-gradient(-115deg, #F9A65A 2.67%, rgba(255, 116, 173, 0.60) 35.53%, rgba(154, 107, 254, 0.00) 67.71%);
+}
+
+.next_gen_btn::after {
+    content: '';
+    position: absolute;
+    width: 5.5rem;
+    right: -75%;
+    top: 50%;
+    height: 0.0625rem;
+    flex-shrink: 0;
+    background: linear-gradient(115deg, #F9A65A 2.67%, rgba(255, 116, 173, 0.60) 35.53%, rgba(154, 107, 254, 0.00) 67.71%);
+}
+
+/* -- Slideout Sidebar -- */
+
+.slideout-sidebar {
+    position: fixed;
+    top: 0;
+    left: -560px;
+    z-index: 100;
+    width: 325px;
+    height: 100%;
+    padding: 20px;
+    transition: all 300ms ease-in-out;
+
+}
+
+.cart_dropdown {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* -- Menu Icon -- */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 24px;
+    z-index: 1;
+    transition: all 300ms ease-in-out;
+}
+
+
+
+/*-- The Magic --*/
+#menu-toggle:checked~.slideout-sidebar {
+    left: 0px;
+}
+
+#menu-toggle:checked+.menu-icon {
+    left: 325px;
+    transform: rotate(180deg);
+    z-index: 300;
+}
+
+
+/* -- Media Queries -- */
+
+@media (max-width: 991px) {
+
+   
+    #menu-toggle:checked~.slideout-sidebar {
+        width: 100%;
+    }
+
+    #menu-toggle:checked+.menu-icon {
+        left: 87%;
+        z-index: 300;
+        color: red;
+    }
+
+    @media screen and (max-width: 736px) and (orientation: landscape) {
+
+        .slideout-sidebar {
+            padding: 0;
+        }
+
+    }
+
+}
+
+
+.search_area{
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 4px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 0px -5px 4px 0px rgba(242, 242, 242, 0.25) inset, -4px -4px 4px 0px rgba(237, 217, 217, 0.25) inset;
+   
+}

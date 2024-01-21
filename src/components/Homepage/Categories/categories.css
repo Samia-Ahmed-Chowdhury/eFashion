@@ -76,6 +76,22 @@ label {
     /* padding: 20px 50px; */
 }
 
+.catBtn_active {
+    border-top: 7px solid #F2575D;
+    border-radius: 20px 20px 0px 0px;
+    background: #FFF;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.6px;
+    width: 150px;
+    height: 65px;
+    flex-shrink: 0;
+
+}
+
 .cat_cards {
     /* width: 296.358px; */
     /* height: 289px; */
@@ -133,6 +149,7 @@ label {
     transition: all .5s linear;
     animation: heart_ani 3s linear infinite;
 }
+
 /* .actived_heart{
     
 } */
