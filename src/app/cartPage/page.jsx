@@ -11,6 +11,7 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import { removeAllCartItem } from "../redux/slice/CartSlice";
 import Swal from "sweetalert2";
 import OptionDiv from "@/components/CartPage/OptionDiv";
+import Link from "next/link";
 
 function page() {
   const cartData = useSelector((data) => data.cartListData.cartList);
@@ -128,9 +129,12 @@ function page() {
               </h5>
 
               <div className="flex flex-col lg:flex-row gap-4 justify-center mt-5">
-                <button className=" inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">
+                  <Link href="/login">
+                  <button 
+                 className=" inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">
                   Check out
                 </button>
+                </Link>
                 <button
                   onClick={allItemHandler}
                   className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
@@ -143,7 +147,7 @@ function page() {
         </div>
       ) : (
         <p className="text-black text-xl my-16 font-black text-center">
-          Nothing is added into cart...Please add some products..{" "}
+          Nothing is added into cart...Please add some products..
         </p>
       )}
     </div>

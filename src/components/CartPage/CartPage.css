@@ -19,7 +19,7 @@
 }
 
 .add {
-    padding:  12px 15px;
+    padding: 12px 15px;
     border: none;
     border-radius: 15px;
     background: #F2575D;
@@ -37,7 +37,8 @@
     font-size: 20px;
     margin-right: 20px;
 }
-.total_part{
+
+.total_part {
     border-radius: 8px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 4px 4px 4px 0px rgba(0, 0, 0, 0.15) inset, 0px -5px 4px 0px rgba(242, 242, 242, 0.25) inset, -4px -4px 4px 0px rgba(237, 217, 217, 0.25) inset;
@@ -46,20 +47,24 @@
 }
 
 .btn-custom-success {
-    background-color: #F2575D; /* Your custom success button color */
-    color: #fff; /* Text color */
+    background-color: #F2575D;
+    /* Your custom success button color */
+    color: #fff;
+    /* Text color */
     border: none;
-  }
-  
-  .btn-custom-danger {
-    background-color: #398AB9; /* Your custom danger button color */
-    color: #fff; /* Text color */
+}
+
+.btn-custom-danger {
+    background-color: #398AB9;
+    /* Your custom danger button color */
+    color: #fff;
+    /* Text color */
     border: none;
     margin-right: 4px;
-  }
+}
 
-  
-  /* toggle in label designing */
+
+/* toggle in label designing */
 
 .switch {
     border-radius: 55px;
@@ -92,8 +97,8 @@
     transition: .5s left ease;
     border-radius: 55px;
     background: var(--Colors-pri_4, #B0D0E3);
-   z-index: 100;
- opacity: 0.8;
+    z-index: 100;
+    opacity: 0.8;
 }
 
 .switch:has(#switch-radio1:checked)::before {
@@ -104,7 +109,7 @@
     left: 50%;
 }
 
-input {
+.switch input {
     display: none;
     cursor: pointer;
 }

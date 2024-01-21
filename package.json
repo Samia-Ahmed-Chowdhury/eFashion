@@ -21,6 +21,7 @@
     "react-redux": "^8.1.2",
     "sweetalert2": "^11.7.5",
     "swiper": "^11.0.5",
+    "react-hook-form": "^7.44.2",
     "swiper-react": "^1.0.0"
   },
   "devDependencies": {

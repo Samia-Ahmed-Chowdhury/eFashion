@@ -45,7 +45,7 @@
     left: 66%;
 }
 
-input {
+.switch input {
     display: none;
     cursor: pointer;
 }

@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <div className="navbar mx-auto max-w-6xl bg-transparent py-6">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">
+        <Link href="/" className="btn btn-ghost text-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="84"
@@ -37,7 +37,7 @@ function Navbar() {
               fill="#F2575D"
             />
           </svg>
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
         <div className="dropdown  dropdown-end">
@@ -146,6 +146,7 @@ function Navbar() {
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <Link href="/login">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,19 +164,9 @@ function Navbar() {
                 />
               </svg>
             </div>
+              </Link>
           </div>
-          <div
-            tabIndex={0}
-            className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-          >
-            <div className="card-body">
-              <span className="font-bold text-lg">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
-              <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
