@@ -1,6 +1,6 @@
 import connectMongoDB from '@/config/mongodb'
 import  Product  from "@/model/product";
-import { NextResponse } from "next/server";
+import { NextResponse,NextRequest } from "next/server";
 import mongoose from "mongoose";
 
 export async function GET() {

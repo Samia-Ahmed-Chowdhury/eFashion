@@ -15,7 +15,6 @@ function CatCards() {
 
   let [isOpen, setIsOpen] = useState(false);
   let [item, setItem] = useState({});
-  // let [wishItem, setWishItem] = useState("");
 
   function closeModal() {
     setIsOpen(false);

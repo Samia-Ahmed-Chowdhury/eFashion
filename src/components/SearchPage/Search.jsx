@@ -1,15 +1,10 @@
 "use client";
-import React, { useContext } from "react";
 import "./SearchPage.css";
-
+import React, {  useContext, useState } from "react";
+import { catBtnContext } from "@/provider/CategoriesProvider";
 
 function Search() {
-  const searchHandler = (e) => {
-    const seachValue = e.target.value;
-   
-    console.log(seachValue)
-
-  };
+  const { searchHandler } = useContext(catBtnContext);
 
   return (
     <>

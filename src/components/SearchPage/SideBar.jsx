@@ -9,11 +9,11 @@ function SideBar() {
   return (
     <div className="fixed top-1/2">
       <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">
+      <label htmlFor="menu-toggle" className="menu-icon">
         <PiCloudArrowUpFill className="rightArrow text-mainColor " />
       </label>
 
-      <div class="slideout-sidebar cart_dropdown ">
+      <div className="slideout-sidebar cart_dropdown ">
         <div className="my-5 flex items-center ">
           <HiFilter className="text-mainColor w-8 h-8 inline" />
           <h2 className="text-textC1">Filter:</h2>
