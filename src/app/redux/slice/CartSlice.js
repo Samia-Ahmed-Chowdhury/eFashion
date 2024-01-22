@@ -3,7 +3,7 @@ import { createSlice, current } from "@reduxjs/toolkit"
 import Swal from "sweetalert2";
 
 const initialState = {
-    cartList: JSON.parse(localStorage.getItem("cartList")) ? JSON.parse(localStorage.getItem("cartList")) : []
+    cartList: typeof window !== 'undefined' && JSON.parse(localStorage.getItem("cartList")) ? JSON.parse(localStorage.getItem("cartList")) : []
 }
 
 const Slice = createSlice({
