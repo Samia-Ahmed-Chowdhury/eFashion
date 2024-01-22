@@ -10,7 +10,7 @@ import SideBar from "@/components/SearchPage/SideBar";
 import Search from "@/components/SearchPage/Search";
 import { catBtnContext } from "@/provider/CategoriesProvider";
 
-function page() {
+function Page() {
   const { searchData, catWiseCards } = useContext(catBtnContext);
   return (
     <div className="categories_bg pb-2">
@@ -33,4 +33,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

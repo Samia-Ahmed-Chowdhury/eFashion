@@ -19,7 +19,7 @@ function ImgSlider({ imgs }) {
       setSelectedImage(imgs[0]); // Set the initial selected image
       setCartSelectedImg(imgs[0])
     }
-  }, [imgs]);
+  }, [imgs,setCartSelectedImg]);
 
   const handleSelectedImageChange = (newIdx) => {
     if (imgs && imgs.length > 0) {

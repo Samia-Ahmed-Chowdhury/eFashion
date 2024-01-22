@@ -7,14 +7,13 @@ import { IoIosRemove, IoMdAdd, IoMdTrash } from "react-icons/io";
 import { removeCartItem, updateCartItem } from "@/app/redux/slice/CartSlice";
 
 function CartCard({ item }) {
-
   const dispatch = useDispatch();
 
-  const ItemHandler = ({item,type}) => {
-      dispatch(updateCartItem({item,type}))
+  const ItemHandler = ({ item, type }) => {
+    dispatch(updateCartItem({ item, type }));
   };
   const delItemHandler = (item) => {
-      dispatch(removeCartItem(item))
+    dispatch(removeCartItem(item));
   };
 
   return (
@@ -36,7 +35,7 @@ function CartCard({ item }) {
         </div>
         <div>
           <span className="text-[15px] text-textC1 font-semibold">
-            {item.subCategory}'s for {item.category}
+            {item.subCategory}&apos;s for {item.category}
           </span>
         </div>
 
@@ -47,14 +46,14 @@ function CartCard({ item }) {
           >
             <button
               className="subtract cursor-pointer"
-              onClick={() => ItemHandler({item,type:'decrement'})}
+              onClick={() => ItemHandler({ item, type: "decrement" })}
             >
               <IoIosRemove />
             </button>
             <h2 className="text-xl font-bold text-black">{item.quantity}</h2>
             <button
               className="add cursor-pointer"
-              onClick={() => ItemHandler({item,type:'increment'})}
+              onClick={() => ItemHandler({ item, type: "increment" })}
             >
               <IoMdAdd />
             </button>
@@ -63,12 +62,15 @@ function CartCard({ item }) {
 
         <div className="">
           <h5 className="text-xl font-black text-black text-center">
-            {item.price*item.quantity}
+            {item.price * item.quantity}
           </h5>
           {/* <h5>{count > 0 ? price * count : price}</h5> */}
         </div>
         <div className="flex justify-center">
-          <IoMdTrash className="del cursor-pointer" onClick={() => delItemHandler(item)} />
+          <IoMdTrash
+            className="del cursor-pointer"
+            onClick={() => delItemHandler(item)}
+          />
         </div>
       </div>
     </>

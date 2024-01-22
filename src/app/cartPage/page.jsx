@@ -12,7 +12,7 @@ import { removeAllCartItem } from "../redux/slice/CartSlice";
 import Swal from "sweetalert2";
 import OptionDiv from "@/components/CartPage/OptionDiv";
 
-function page() {
+function Page() {
   const cartData = useSelector((data) => data.cartListData.cartList);
 
   const router = useRouter();
@@ -158,4 +158,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

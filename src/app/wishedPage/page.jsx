@@ -11,7 +11,7 @@ import "@/components/Homepage/Categories/categories.css";
 import { useRouter } from "next/navigation";
 import { removeWishItem } from "../redux/slice/WishedSlice";
 
-function page() {
+function Page() {
   const wishedData = useSelector((data) => data.wishListData.wishList);
 
   const dispatch = useDispatch();
@@ -333,4 +333,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
