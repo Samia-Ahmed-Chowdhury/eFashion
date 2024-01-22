@@ -11,6 +11,7 @@ function CategoriesProvider({ children }) {
   const [cartSelectedImg, setCartSelectedImg] = useState("");
   const [catBtn_active, setCatBtn_active] = useState("All");
   const [searchData, setSearchData] = useState("");
+  const [statusOption, setStatusOption] = useState("");
 
   useEffect(() => {
     fetch("api/products")
@@ -24,10 +25,18 @@ function CategoriesProvider({ children }) {
     const d = allProductData.filter((datas) => {
       return datas.category === selectedOption;
     });
-    // console.log(d)
     setAllCatProData(d);
     setCatWiseCards(d);
   }, [selectedOption, allProductData]);
+
+  useEffect(() => {
+    const d = allProductData.filter((datas) => {
+      return datas.status === statusOption && datas.category === selectedOption;
+    });
+    // console.log(d)
+    setAllCatProData(d);
+    setCatWiseCards(d);
+  }, [statusOption]);
 
   const handleSelectOption = (option) => {
     setSelectedOption(option);
@@ -40,10 +49,10 @@ function CategoriesProvider({ children }) {
     fetch(`api/search?query=${seachValue}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
         setCatWiseCards(data);
       });
   };
+
 
   const btnList = [
     "All",
@@ -85,6 +94,7 @@ function CategoriesProvider({ children }) {
     searchData,
     setSearchData,
     searchHandler,
+    statusOption, setStatusOption
   };
 
   return (

@@ -1,10 +1,15 @@
+'use client'
 import React from "react";
 import SelectionDiv from "./SelectionDiv";
 import "./categories.css";
 import CatButtons from "./CatButtons";
 import CatCards from "./CatCards";
+import { useRouter } from "next/navigation";
 
 function Categories() {
+
+const router = useRouter();
+
   return (
     <div className="mb-32 ">
       <SelectionDiv />
@@ -12,7 +17,7 @@ function Categories() {
         <CatButtons />
         <CatCards />
         <div className=" mb-10 mx-5 max-w-6xl  flex justify-end items-center gap-2">
-          <button className="flex items-center gap-2">
+          <button onClick={()=> router.push('/searchPage')} className="flex items-center gap-2">
             <span className="text-[#F2575D] text-[18px] font-semibold ">
               Shop More
             </span>

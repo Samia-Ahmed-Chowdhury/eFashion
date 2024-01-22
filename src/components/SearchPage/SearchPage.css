@@ -3,6 +3,8 @@
     transform: rotate(90deg);
     transition: all .5s linear;
     animation: arrow_ani 3s linear infinite;
+    position: fixed;
+    top:50%
 }
 
 @keyframes arrow_ani {
@@ -108,6 +110,8 @@
     left: 325px;
     transform: rotate(180deg);
     z-index: 300;
+    position: fixed;
+    top:50%
 }
 
 

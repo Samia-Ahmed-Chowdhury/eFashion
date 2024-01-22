@@ -100,6 +100,13 @@ label {
     background: #FFF;
     cursor: pointer;
 }
+.offer_price_cut{
+   text-decoration: line-through;
+   text-decoration-color: red;
+   color: #BBB5B5;
+   
+}
+
 
 .carousel-container {
     margin: 20px;

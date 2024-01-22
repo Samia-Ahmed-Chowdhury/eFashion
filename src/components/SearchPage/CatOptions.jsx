@@ -4,13 +4,12 @@ import { catBtnContext } from "@/provider/CategoriesProvider";
 import Btn from "./Btn";
 
 function CatOptions() {
-  const { btnList, catBtn_active, CatbtnClickHandler } =
-    useContext(catBtnContext);
+  const { btnList, catBtn_active, CatbtnClickHandler } =  useContext(catBtnContext);
   // console.log(btnList);
   return (
-    <div className="my-6">
+    <div className="mt-6 mb-4">
       <Btn props="Sub Categories" />
-      <div className="flex flex-col items-start  space-y-1">
+      <div className="flex flex-col items-start  ">
         {btnList.map((btn, index) => {
           return (
             <label key={index} className="  label cursor-pointer  gap-2">

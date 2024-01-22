@@ -7,7 +7,7 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Rating from "react-rating";
 import Modal from "./Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { addWishItem,removeWishItem } from "@/app/redux/slice/WishedSlice";
+import { addWishItem, removeWishItem } from "@/app/redux/slice/WishedSlice";
 
 function CatCards() {
   const { catWiseCards } = useContext(catBtnContext);
@@ -33,9 +33,7 @@ function CatCards() {
 
   const wishItemDispatch = (item) => {
     const allowed = wishedData.find((i) => i._id === item._id);
-    !allowed
-      ? dispatch(addWishItem(item))
-      : dispatch(removeWishItem(item._id))
+    !allowed ? dispatch(addWishItem(item)) : dispatch(removeWishItem(item._id));
   };
 
   return (
@@ -45,10 +43,10 @@ function CatCards() {
           return (
             <div className="cat_cards" key={item._id}>
               <div className="">
-                {wishedData.find((i) => i._id === item._id)
-                ? (
-                  <svg onClick={() => wishItemDispatch(item)}
-                  className="ml-auto cursor-pointer "
+                {wishedData.find((i) => i._id === item._id) ? (
+                  <svg
+                    onClick={() => wishItemDispatch(item)}
+                    className="ml-auto cursor-pointer "
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="33"
@@ -78,10 +76,7 @@ function CatCards() {
                         filterUnits="userSpaceOnUse"
                         colorInterpolationFilters="sRGB"
                       >
-                        <feFlood
-                          floodOpacity="0"
-                          result="BackgroundImageFix"
-                        />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feColorMatrix
                           in="SourceAlpha"
                           type="matrix"
@@ -291,9 +286,16 @@ function CatCards() {
                   {item.details}
                 </p>
 
-                <h5 className="my-1 text-sm font-bold text-[#F2575D]">
-                  ${item.price}
-                </h5>
+                {item.status === "Offers" ? (
+                  <h5 className="my-1 text-sm font-bold text-[#F2575D]">
+                   ${parseInt(item.price*.7)} <span className="offer_price_cut"> ${item.price}</span>
+                  </h5>
+                ) : (
+                  <h5 className="my-1 text-sm font-bold text-[#F2575D]">
+                    ${item.price}
+                  </h5>
+                )
+                }
                 <Rating
                   className="text-[#398AB9]"
                   placeholderRating={item.rating}
@@ -313,7 +315,6 @@ function CatCards() {
           );
         })}
       </div>
- 
 
       <Modal isOpen={isOpen} item={item} closeModal={closeModal} />
     </>

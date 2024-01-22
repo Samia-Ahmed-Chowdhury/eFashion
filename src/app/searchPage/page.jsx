@@ -17,12 +17,12 @@ function page() {
       <Navbar />
       <SideBar />
 
-      <div className="grid md:grid-cols-2 items-center justify-between mx-5 lg:mx-auto max-w-6xl">
+      <div className="flex flex-col-reverse md:flex-row   mx-5 lg:mx-auto max-w-6xl">
         {searchData ? (
-         <p  className="text-lg font-medium text-right text-textC9 mt-5">
+         <p  className="text-lg font-medium text-center md:ml-auto text-textC9 mt-5">
           About {catWiseCards.length} results for {searchData}</p>
         ) : (
-          <h5 className="text-2xl font-bold text-right text-textC1 mt-5">
+          <h5 className=" text-2xl font-bold text-center md:ml-auto text-textC1 mt-5">
             All Products
           </h5>
         )}

@@ -102,7 +102,7 @@ function Page() {
               </button>
             </div>
             <p className="text-lg font-medium mt-5">
-              Dont’t Have An Account ?{" "}
+              Dont’t Have An Account ?
               <Link className="font-medium text-[#398AB9]" href="/signup">
                 Register
               </Link>
