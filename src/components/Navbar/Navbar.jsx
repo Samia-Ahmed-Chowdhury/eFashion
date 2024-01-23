@@ -4,11 +4,12 @@ import React from "react";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 function Navbar() {
   const wishedData = useSelector((data) => data.wishListData.wishList);
   const cartData = useSelector((data) => data.cartListData.cartList);
-
+  console.log(wishedData.length);
   const totalItem = cartData.reduce((previousValue, currentValue) => {
     return previousValue + currentValue.quantity;
   }, 0);
@@ -41,7 +42,7 @@ function Navbar() {
       </div>
       <div className="flex-none">
         <div className="dropdown  dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div role="button" className="btn btn-ghost btn-circle">
             <Link href="/searchPage">
               <div className="indictor">
                 <svg
@@ -64,7 +65,7 @@ function Navbar() {
           </div>
         </div>
         <div className="dropdown  dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div role="button" className="btn btn-ghost btn-circle">
             <Link href="/wishedPage">
               <div className="indicator">
                 <svg
@@ -137,7 +138,7 @@ function Navbar() {
           </div>
         </div>
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div role="button" className="btn btn-ghost btn-circle">
             <Link href="/login">
               <div className="indicator">
                 <svg
@@ -164,4 +165,7 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+// export default Navbar;
+
+export default dynamic (() => Promise.resolve(Navbar), {ssr: false})
+
