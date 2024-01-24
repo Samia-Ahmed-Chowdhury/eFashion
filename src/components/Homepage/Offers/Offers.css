@@ -1,0 +1,54 @@
+.girl_em{
+    animation: img_move 7s infinite linear;
+}
+@keyframes img_move {
+    0% {
+        transform: translateX(-90px);
+    }
+    50% {
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translate(200%,-20%);
+    }
+    
+}
+.girl_box{
+    animation: imgbox_move 9s infinite linear;
+}
+@keyframes imgbox_move {
+    0% {
+        transform: translate(200%,-20%);
+    }
+
+    100%{
+        transform: translateX(400%);
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    @keyframes img_move {
+        0% {
+            transform: translateX(-90px);
+        }
+        50% {
+            transform: translateX(120%);
+        }
+        100%{
+            transform: translate(120%,-20%);
+        }
+        
+    }
+
+    @keyframes imgbox_move {
+        0% {
+            transform: translate(60%,-20%);
+        }
+    
+        100%{
+            transform: translateX(100%);
+        }
+        
+    }
+}

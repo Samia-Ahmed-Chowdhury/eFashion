@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 function Navbar() {
   const wishedData = useSelector((data) => data.wishListData.wishList);
   const cartData = useSelector((data) => data.cartListData.cartList);
-  console.log(wishedData.length);
+
   const totalItem = cartData.reduce((previousValue, currentValue) => {
     return previousValue + currentValue.quantity;
   }, 0);
