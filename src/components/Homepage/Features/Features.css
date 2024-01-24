@@ -1,0 +1,66 @@
+
+/* toggle in label designing */
+
+.switchBtns {
+border-radius: 33px 33px 0px 0px;
+    background: #F9ECED;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.6px;
+    /* width: 300px;
+    height: 62px;
+    padding:  0 5px; */
+    /* gap: 2rem; */
+    position: relative;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.switchBtns label {
+    z-index: 1;
+}
+.switchBtns .lable-switch-btn1{
+padding: 20px 37px;
+}
+.switchBtns .lable-switch-btn2{
+padding: 20px 18px;
+}
+
+.switchBtns::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transition: .5s left ease;
+border-radius: 33px 33px 0px 0px;
+    background: #FFC2C5;
+
+}
+
+.switchBtns:has(#switch-btn1:checked)::before {
+    left: 0%;
+}
+
+.switchBtns:has(#switch-btn2:checked)::before {
+    left: 49%;
+}
+
+.switchBtns input {
+    display: none;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+.feature_img{
+    width: 215px;
+height: 157px;
+flex-shrink: 0;
+}

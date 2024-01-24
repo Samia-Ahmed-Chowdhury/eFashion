@@ -5,7 +5,7 @@ function OptionDiv(props) {
 
 const {selectOp,setSelectOp}=props.value
   return (
-    <div  className="switch">
+    <div  className="switch_cart">
         <input type="radio" id="switch-radio1" name="radio"
          checked={selectOp === "Delivery"}
          onChange={() => setSelectOp("Delivery")}

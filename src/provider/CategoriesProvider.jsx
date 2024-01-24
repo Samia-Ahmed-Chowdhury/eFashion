@@ -12,6 +12,8 @@ function CategoriesProvider({ children }) {
   const [catBtn_active, setCatBtn_active] = useState("All");
   const [searchData, setSearchData] = useState("");
   const [statusOption, setStatusOption] = useState("");
+  const [featuresBtn, setFeaturesBtn] = useState("Tranding");
+  const [featuresData, setFeaturesData] = useState([]);
 
   useEffect(() => {
     fetch("api/products")
@@ -37,6 +39,13 @@ function CategoriesProvider({ children }) {
     setAllCatProData(d);
     setCatWiseCards(d);
   }, [statusOption]);
+
+  useEffect(() => {
+    const d = allProductData.filter((datas) => {
+      return datas.status === featuresBtn;
+    });
+    setFeaturesData(d);
+  }, [featuresBtn,allProductData]);
 
   const handleSelectOption = (option) => {
     setSelectedOption(option);
@@ -94,7 +103,7 @@ function CategoriesProvider({ children }) {
     searchData,
     setSearchData,
     searchHandler,
-    statusOption, setStatusOption
+    statusOption, setStatusOption,featuresBtn, setFeaturesBtn,featuresData
   };
 
   return (

@@ -66,7 +66,7 @@
 
 /* toggle in label designing */
 
-.switch {
+.switch_cart {
     border-radius: 55px;
     background: #F9ECED;
     color: #333;
@@ -83,12 +83,12 @@
     justify-content: space-around;
 }
 
-.switch label {
+.switch_cart label {
     padding: 1rem 0;
     z-index: 1;
 }
 
-.switch::before {
+.switch_cart::before {
     content: '';
     position: absolute;
     left: 0;
@@ -101,15 +101,15 @@
     opacity: 0.8;
 }
 
-.switch:has(#switch-radio1:checked)::before {
+.switch_cart:has(#switch-radio1:checked)::before {
     left: 0%;
 }
 
-.switch:has(#switch-radio2:checked)::before {
+.switch_cart:has(#switch-radio2:checked)::before {
     left: 50%;
 }
 
-.switch input {
+.switch_cart input {
     display: none;
     cursor: pointer;
 }

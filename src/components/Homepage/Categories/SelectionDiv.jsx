@@ -10,24 +10,24 @@ function SelectionDiv() {
 
   return (
     <div className="my-10 mx-5 lg:mx-auto max-w-6xl flex justify-center md:justify-normal">
-      <div className="switch">
-        <input type="radio" id="switch-radio1"  name="radio"
+      <div className="switch switch_cat">
+        <input type="radio" id="switch-cat-radio1"  name="cat-radio"
         checked={selectedOption === "Kids"}
         onChange={() => handleSelectOption("Kids")}
          />
-        <label htmlFor="switch-radio1">Kids</label>
+        <label htmlFor="switch-cat-radio1">Kids</label>
 
-        <input type="radio" id="switch-radio2" name="radio"
+        <input type="radio" id="switch-cat-radio2" name="cat-radio"
          checked={selectedOption === "Women"}
          onChange={() => handleSelectOption("Women")}
         />
-        <label htmlFor="switch-radio2">Women</label>
+        <label htmlFor="switch-cat-radio2">Women</label>
 
-        <input type="radio" id="switch-radio3" name="radio"
+        <input type="radio" id="switch-cat-radio3" name="cat-radio"
          checked={selectedOption === "Men"}
          onChange={() => handleSelectOption("Men")}
         />
-        <label htmlFor="switch-radio3">Men</label>
+        <label htmlFor="switch-cat-radio3">Men</label>
 
       </div>
     </div>

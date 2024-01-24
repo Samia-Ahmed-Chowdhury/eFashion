@@ -1,6 +1,6 @@
 /* toggle in label designing */
 
-.switch {
+.switch_cat {
     border-radius: 55px;
     background: #F9ECED;
     color: #333;
@@ -17,12 +17,12 @@
     justify-content: space-around;
 }
 
-.switch label {
+.switch_cat label {
     padding: 1rem;
     z-index: 1;
 }
 
-.switch::before {
+.switch_cat::before {
     content: '';
     position: absolute;
     left: 0;
@@ -33,19 +33,19 @@
     background: var(--Colors-pri_4, #B0D0E3);
 }
 
-.switch:has(#switch-radio1:checked)::before {
+.switch_cat:has(#switch-cat-radio1:checked)::before {
     left: 0%;
 }
 
-.switch:has(#switch-radio2:checked)::before {
+.switch_cat:has(#switch-cat-radio2:checked)::before {
     left: 33%;
 }
 
-.switch:has(#switch-radio3:checked)::before {
+.switch_cat:has(#switch-cat-radio3:checked)::before {
     left: 66%;
 }
 
-.switch input {
+.switch_cat input {
     display: none;
     cursor: pointer;
 }
