@@ -17,7 +17,7 @@ function Page() {
       <Navbar />
       <SideBar />
 
-      <div className="flex flex-col-reverse md:flex-row   mx-5 lg:mx-auto max-w-6xl">
+      <div className="flex flex-col-reverse md:flex-row   mx-6 lg:mx-auto max-w-6xl">
         {searchData ? (
          <p  className="text-lg font-medium text-center md:ml-auto text-textC9 mt-5">
           About {catWiseCards.length} results for {searchData}</p>

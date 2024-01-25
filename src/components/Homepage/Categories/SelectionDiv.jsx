@@ -9,7 +9,7 @@ function SelectionDiv() {
 
 
   return (
-    <div className="my-10 mx-5 lg:mx-auto max-w-6xl flex justify-center md:justify-normal">
+    <div className="my-10 mx-6 lg:mx-auto max-w-6xl flex justify-center md:justify-normal">
       <div className="switch switch_cat">
         <input type="radio" id="switch-cat-radio1"  name="cat-radio"
         checked={selectedOption === "Kids"}

@@ -16,12 +16,13 @@
     "react": "^18.2.0",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "^18.2.0",
+    "react-grid-carousel": "^1.0.1",
+    "react-hook-form": "^7.44.2",
     "react-icons": "^4.8.0",
     "react-rating": "^2.0.5",
     "react-redux": "^8.1.2",
     "sweetalert2": "^11.7.5",
     "swiper": "^11.0.5",
-    "react-hook-form": "^7.44.2",
     "swiper-react": "^1.0.0"
   },
   "devDependencies": {

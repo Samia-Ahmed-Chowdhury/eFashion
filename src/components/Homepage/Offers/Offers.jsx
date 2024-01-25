@@ -4,7 +4,7 @@ import './Offers.css'
 
 function Offers() {
   return (
-    <div className="flex flex-col lg:flex-row gap-24 mx-5 lg:mx-auto max-w-6xl pb-10">
+    <div className="flex flex-col lg:flex-row gap-24 mx-6 lg:mx-auto max-w-6xl pb-10">
       <div className="mx-auto lg:ms-auto relative  ">
         <Image  src="/images/banner.png"  alt="logo"  width={550}  height={500}  priority />
         <Image className="absolute top-[30%] girl_em "  src="/images/girl_em.png"  alt="logo"  width={120}  height={120}  priority />

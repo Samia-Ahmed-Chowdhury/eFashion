@@ -6,6 +6,7 @@ import Rating from "react-rating";
 import Image from "next/image";
 import { catBtnContext } from "@/provider/CategoriesProvider";
 import Modal from "../Categories/Modal";
+import Carousel from 'react-grid-carousel'
 
 function FeaturesDiv() {
   const { featuresData } = useContext(catBtnContext);
@@ -26,10 +27,15 @@ function FeaturesDiv() {
 
   return (
     <div className="categories_bg py-14">
-      <div className="mx-5 lg:mx-auto max-w-6xl grid md:grid-cols-2 lg:grid-cols-4   gap-5">
+      <div className="mx-6 lg:mx-auto max-w-6xl">
+      <Carousel cols={4} rows={2} gap={20} loop  autoplay={2000}>
         {featuresData.map((item) => {
           return (
-            <div className="cat_cards " key={item._id}>
+            <Carousel.Item key={item._id} >
+            <div className="cat_cards circles " onClick={() => openModal(item)}>
+              <div className="circle1"></div>
+              <div className="circle2"></div>
+              <div className="circle3"></div>
               <figure className="">
                 <Image
                   className="feature_img"
@@ -43,7 +49,7 @@ function FeaturesDiv() {
 
               <div className="mt-5">
                 <p className="text-sm font-medium text-[#554747] ">
-                {item.subCategory}&apos;s for {item.category}
+                  {item.subCategory}&apos;s for {item.category}
                 </p>
 
                 <h5 className="my-1 text-sm font-bold text-[#F2575D]">
@@ -59,15 +65,11 @@ function FeaturesDiv() {
                   readonly
                 />
               </div>
-
-              <div className="flex justify-end">
-                <button className="pulse_btn">
-                  <PiArrowBendUpRightBold onClick={() => openModal(item)} />
-                </button>
-              </div>
             </div>
+            </Carousel.Item>
           );
         })}
+      </Carousel>
       </div>
       <Modal isOpen={isOpen} item={item} closeModal={closeModal} />
     </div>

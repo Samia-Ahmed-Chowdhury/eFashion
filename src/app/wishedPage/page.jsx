@@ -37,7 +37,7 @@ function Page() {
   return (
     <div className="bg-myBg pb-10 min-h-[100vh]">
       <Navbar />
-      <div className="my-5 mx-5 lg:mx-auto   max-w-6xl mr-auto">
+      <div className="my-5 mx-6 lg:mx-auto   max-w-6xl mr-auto">
         <PiArrowFatLineLeftFill
           className="text-3xl cursor-pointer backIcon text-[#F2575D]"
           onClick={() => {
@@ -46,7 +46,7 @@ function Page() {
         />
       </div>
       {wishedData.length ? (
-        <div className="my-10 mx-5 lg:mx-auto max-w-6xl grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="my-10 mx-6 lg:mx-auto max-w-6xl grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {wishedData.map((item) => {
             return (
               <div className="cat_cards" key={item._id}>

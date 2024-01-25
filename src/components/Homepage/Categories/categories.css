@@ -157,12 +157,6 @@ label {
     animation: heart_ani 3s linear infinite;
 }
 
-/* .actived_heart{
-    
-} */
-/* .cat_cards:hover .heart {
-  
-} */
 
 .pulse_btn {
     padding: 10px;
@@ -209,15 +203,8 @@ label {
     }
 }
 
-/* ====
--webkit-border-radius: 50px;
-border-radius: 50px;
-background: #ffffff;
--webkit-box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
-box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
-
-
-background: #EEF0F4;
-border-radius: 100%;
-box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
-*/
+@media screen and (max-width: 767px){
+    .catBtn_active ,.catBtns{
+    width: 100px;
+    }
+}

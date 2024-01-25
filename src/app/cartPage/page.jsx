@@ -74,7 +74,7 @@ function Page() {
   return (
     <div className="bg-myBg h-[100vh] pb-3">
       <Navbar />
-      <div className="my-1 mx-5 lg:mx-auto max-w-6xl mr-auto">
+      <div className="my-1 mx-6 lg:mx-auto max-w-6xl mr-auto">
         <span
           className="ml-2 text-[#F2575D] cursor-pointer"
           onClick={() => {
@@ -95,7 +95,7 @@ function Page() {
       </div>
 
       {cartData.length ? (
-        <div className="my-6 mx-5 lg:mx-auto max-w-6xl grid grid-cols-1  md:grid-cols-[1fr,.3fr] justify-between gap-14">
+        <div className="my-6 mx-6 lg:mx-auto max-w-6xl grid grid-cols-1  md:grid-cols-[1fr,.3fr] justify-between gap-14">
           <div className="cart_part ">
             <Scrollbars className="cart-items-container">
               {cartData.map((item, index) => {

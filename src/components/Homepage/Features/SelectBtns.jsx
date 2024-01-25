@@ -10,7 +10,7 @@ function SelectBtns() {
 
 
   return (
-    <div className="mt-20 mx-5 lg:mx-auto max-w-6xl flex">
+    <div className="mt-20 mx-6 lg:mx-auto max-w-6xl flex">
       <div className="switchBtns switch">
         <input
           type="radio"
