@@ -109,14 +109,15 @@ label {
 margin: 0 0 ;
 }
 
-/* @media screen and (max-width: 767px){
+ /* @media screen and (max-width: 767px){
 .enBXZH {
     grid-template-columns: repeat(3,1fr) !important;
     grid-template-rows: repeat(2,.1fr) !important;
-}
-.fbRhFB {
-    padding-left: 0px !important;
-    /* grid-template-columns: 0px !important;
-     grid-column-gap: 0px !important; 
-}
 } */
+
+.slick-initialized .slick-slide {
+    margin-right: 20px;
+}
+.slick-dots {
+  top: 50%;
+}

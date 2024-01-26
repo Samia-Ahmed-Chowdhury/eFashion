@@ -1,12 +1,13 @@
 "use client";
 import React, { useContext, useState } from "react";
-import { PiArrowBendUpRightBold } from "react-icons/pi";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Rating from "react-rating";
 import Image from "next/image";
 import { catBtnContext } from "@/provider/CategoriesProvider";
 import Modal from "../Categories/Modal";
-import Carousel from 'react-grid-carousel'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function FeaturesDiv() {
   const { featuresData } = useContext(catBtnContext);
@@ -24,14 +25,55 @@ function FeaturesDiv() {
     setItem(item);
   }
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    dots: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    rows: 2,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          rows:2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 2, // For smaller screens, maintain 2 rows
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 2, // For smaller screens, maintain 2 rows
+        },
+      },
+    ],
+  };
+
   return (
     <div className="categories_bg py-14">
       <div className="mx-6 lg:mx-auto max-w-6xl">
-      <Carousel cols={4} rows={2} gap={20} loop  autoplay={2000}>
+      <Slider {...settings}>
         {featuresData.map((item) => {
           return (
-            <Carousel.Item key={item._id} >
-            <div className="cat_cards circles " onClick={() => openModal(item)}>
+            <div className="cat_cards circles mb-5"  key={item._id} onClick={() => openModal(item)}>
               <div className="circle1"></div>
               <div className="circle2"></div>
               <div className="circle3"></div>
@@ -65,10 +107,9 @@ function FeaturesDiv() {
                 />
               </div>
             </div>
-            </Carousel.Item>
           );
         })}
-      </Carousel>
+          </Slider>
       </div>
       <Modal isOpen={isOpen} item={item} closeModal={closeModal} />
     </div>
