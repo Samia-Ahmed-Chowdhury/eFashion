@@ -33,7 +33,6 @@ function FeaturesDiv() {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    pauseOnHover: true,
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 4,
