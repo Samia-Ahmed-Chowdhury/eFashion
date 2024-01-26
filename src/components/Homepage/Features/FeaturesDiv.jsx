@@ -26,12 +26,15 @@ function FeaturesDiv() {
   }
 
   const settings = {
+    className: "center",
+    centerMode: true,
     dots: true,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
     infinite: true,
+    centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 2,
     rows: 2,
