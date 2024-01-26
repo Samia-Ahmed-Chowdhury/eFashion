@@ -118,6 +118,6 @@ margin: 0 0 ;
 .slick-initialized .slick-slide {
     margin-right: 20px;
 }
-.slick-dots {
-  top: 50%;
+.slick-track{
+height: 320px;
 }
