@@ -10,7 +10,6 @@ import Carousel from 'react-grid-carousel'
 
 function FeaturesDiv() {
   const { featuresData } = useContext(catBtnContext);
-  //   console.log(featuresData);
 
   let [isOpen, setIsOpen] = useState(false);
   let [item, setItem] = useState({});
