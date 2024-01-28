@@ -8,7 +8,7 @@ function Services() {
     { img_src: "/images/books.svg", heading: "Best Prize Guarantee" },
   ];
   return (
-    <div className="my-28 mx-6 lg:mx-auto max-w-6xl pb-72 ">
+    <div className="my-28 mx-6 lg:mx-auto max-w-6xl pb-12 ">
       <h3 className="text-textC1 text-center font-bold text-4xl">
         What we provides
       </h3>
