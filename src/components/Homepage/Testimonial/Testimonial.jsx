@@ -11,7 +11,7 @@ function Testimonial() {
 
       <div className="py-64 relative">
         {Datas.map((data, index) => (
-          <div className={`${data.rect_div && data.rect_div}`}>
+          <div key={index} className={`${data.rect_div && data.rect_div}`}>
             <Image
               className={`lg:${data.p_img_clsnam && data.p_img_clsnam}`}
               src={data.p_img_src}
