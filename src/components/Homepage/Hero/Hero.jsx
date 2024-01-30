@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import React from "react";
 import "./Hero.css";
 import Image from 'next/image'
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -18,7 +19,9 @@ function Hero() {
             eFashoin is a brutally competitive online business,involves buying and selling fashion-related items online.
             </p>
             <div className="">
+            <Link href="/searchPage">
               <button className="my_button">Grab Offers</button>
+              </Link>
             </div>
           </div>
 

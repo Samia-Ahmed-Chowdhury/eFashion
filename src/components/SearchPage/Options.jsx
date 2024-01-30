@@ -7,7 +7,7 @@ function Options() {
   const { selectedOption, handleSelectOption } = useContext(catBtnContext);
 
   return (
-    <div className="my-3 ">
+    <div className="my-2 ">
      <Btn props="Categories"/>
 
       {/* <h2 className="text-textC9 text-sm mb-2">Categories:</h2> */}

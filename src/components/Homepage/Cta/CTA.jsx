@@ -39,7 +39,7 @@ function CTA() {
           </h3>
           <form className='my-6 flex mx-auto   '>
             <input type="email" className="bg-white md:w-[260px]"  name="email" placeholder="Enter your email" />
-            <button className="btn border-0 rounded-l-[0px] text-center text-white bg-[#398AB9]" type="submit">
+            <button className="btn sub_btn border-0 rounded-l-[0px] text-center text-white bg-[#398AB9]" type="submit">
             Subscribe
             </button>
           </form>

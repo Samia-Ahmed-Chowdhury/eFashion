@@ -15,7 +15,7 @@ function SideBar() {
       </label>
 
       <div className="slideout-sidebar cart_dropdown ">
-        <div className="mt-5 mb-3 flex items-center ">
+        <div className="mt-5 mb-2 flex items-center ">
           <HiFilter className="text-mainColor w-8 h-8 inline" />
           <h2 className="text-textC1">Filter:</h2>
         </div>

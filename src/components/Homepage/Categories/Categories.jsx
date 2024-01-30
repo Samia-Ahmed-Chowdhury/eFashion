@@ -17,7 +17,7 @@ const router = useRouter();
         <CatButtons />
         <CatCards />
         <div className=" mb-10 mx-5 max-w-6xl  flex justify-end items-center gap-2">
-          <button onClick={()=> router.push('/searchPage')} className="flex items-center gap-2">
+          <button onClick={()=> router.push('/searchPage')} className="flex more_btn items-center gap-2">
             <span className="text-[#F2575D] text-[18px] font-semibold ">
               Shop More
             </span>

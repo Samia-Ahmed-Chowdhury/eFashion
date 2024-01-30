@@ -7,7 +7,7 @@ function CatOptions() {
   const { btnList, catBtn_active, CatbtnClickHandler } =  useContext(catBtnContext);
   // console.log(btnList);
   return (
-    <div className="mt-6 mb-4">
+    <div className="mt-4 mb-3">
       <Btn props="Sub Categories" />
       <div className="flex flex-col items-start  ">
         {btnList.map((btn, index) => {

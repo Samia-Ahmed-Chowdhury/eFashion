@@ -70,3 +70,11 @@
     /* 160% */
     padding-left: 30px;
 }
+.sub_btn{
+    transition: all .9s ease;
+}
+.sub_btn:hover {
+    background:#398AB9;
+    box-shadow: 0px 10px 50px 5px rgba(57, 138, 185, .8)
+  }
+  

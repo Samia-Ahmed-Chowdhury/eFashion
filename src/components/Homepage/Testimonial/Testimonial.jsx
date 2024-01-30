@@ -13,7 +13,7 @@ function Testimonial() {
         {Datas.map((data, index) => (
           <div key={index} className={`${data.rect_div && data.rect_div}`}>
             <Image
-              className={`lg:${data.p_img_clsnam && data.p_img_clsnam} `}
+              className={`lg:${data.p_img_clsnam && data.p_img_clsnam} cursor-pointer`}
               src={data.p_img_src}
               alt="logo"
               width={70}

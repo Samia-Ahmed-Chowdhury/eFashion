@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import './Offers.css'
+import Link from "next/link";
 
 function Offers() {
   return (
@@ -17,7 +18,9 @@ function Offers() {
         </h3>
 
         <div className="my-5 mx-auto">
+        <Link href="/searchPage">
           <button className="my_button">Grab Offers</button>
+          </Link>
         </div>
       </div>
     </div>

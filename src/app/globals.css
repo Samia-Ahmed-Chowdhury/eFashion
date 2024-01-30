@@ -2,32 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   overflow-x: hidden;
 }
+
 body {
-    overflow-x: hidden;
-    background-color: white
-  }
+  overflow-x: hidden;
+  background-color: white
+}
 
 .my_button {
-    @apply btn bg-[#F2575D] border-0 rounded-[8px] py-2 px-4 md:px-7 text-white text-[16px] md:text-lg capitalize font-medium}
+  @apply btn bg-[#F2575D] border-0 rounded-[8px] py-2 px-4 md:px-7 text-white text-[16px] md:text-lg capitalize font-medium
+}
+.my_button,.more_btn{
+  transition: all .9s ease;
+}
 
-    .backIcon{
-      transition: all .5s linear;
-      animation: back_ani 3s linear infinite;
-    }
+.my_button:hover {
+  background:#F2575D;
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 50px 5px rgb(242 87 93/ 80%)
+}
+.more_btn:hover {
+ text-shadow: 0px 14px 4px rgba(255, 12, 12, 0.25);
+}
 
-    @keyframes back_ani {
-      0% {
-          transform: translateX(0px);
-      }
-  
-      50% {
-          transform: translateX(10px);
-      }
-  
-      100% {
-          transform: translateX(0px);
-      }
+.backIcon {
+  transition: all .5s linear;
+  animation: back_ani 3s linear infinite;
+}
+
+@keyframes back_ani {
+  0% {
+    transform: translateX(0px);
   }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
