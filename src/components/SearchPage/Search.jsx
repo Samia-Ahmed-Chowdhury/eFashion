@@ -8,7 +8,7 @@ function Search() {
 
   return (
     <>
-      <div className=" my-2 md:my-0 ml-auto">
+      <div className=" my-2 md:my-0">
         <input
           type="text"
           onChange={searchHandler}

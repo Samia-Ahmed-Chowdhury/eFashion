@@ -39,7 +39,7 @@ function CatCards() {
   return (
     <>
       <div className="my-10 mx-6 lg:mx-auto max-w-6xl grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {catWiseCards.map((item) => {
+        {catWiseCards.slice(0, 6).map((item) => {
           return (
             <div className="cat_cards" key={item._id}>
               <div className="">
