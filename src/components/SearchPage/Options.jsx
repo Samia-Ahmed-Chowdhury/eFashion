@@ -25,11 +25,11 @@ function Options() {
         <label className="label cursor-pointer  gap-2">
           <input
             type="radio"
-            checked={selectedOption === "Women"}
-            onChange={() => handleSelectOption("Women")}
+            checked={selectedOption === "Woman"}
+            onChange={() => handleSelectOption("Woman")}
             className="radio border-sideColor border-2 border-opacity-100 checked:bg-mainColor checked:shadow-none"
           />
-          <span className="label-text text-textC9 font-semibold">Women</span>
+          <span className="label-text text-textC9 font-semibold">Woman</span>
         </label>
 
         <label className="label cursor-pointer  gap-2">

@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const catBtnContext = createContext();
 
 function CategoriesProvider({ children }) {
-  const [selectedOption, setSelectedOption] = useState("Women");
+  const [selectedOption, setSelectedOption] = useState("Woman");
   const [allProductData, setAllProductData] = useState([]);
   const [catWiseCards, setCatWiseCards] = useState([]);
   const [allCatProData, setAllCatProData] = useState([]);

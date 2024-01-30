@@ -18,16 +18,16 @@ function SelectionDiv() {
         <label htmlFor="switch-cat-radio1">Kids</label>
 
         <input type="radio" id="switch-cat-radio2" name="cat-radio"
-         checked={selectedOption === "Women"}
-         onChange={() => handleSelectOption("Women")}
+         checked={selectedOption === "Woman"}
+         onChange={() => handleSelectOption("Woman")}
         />
-        <label htmlFor="switch-cat-radio2">Women</label>
+        <label htmlFor="switch-cat-radio2">Woman</label>
 
         <input type="radio" id="switch-cat-radio3" name="cat-radio"
          checked={selectedOption === "Men"}
          onChange={() => handleSelectOption("Men")}
         />
-        <label htmlFor="switch-cat-radio3">Men</label>
+        <label htmlFor="switch-cat-radio3">Man</label>
 
       </div>
     </div>
