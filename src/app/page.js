@@ -1,6 +1,7 @@
 import Categories from "@/components/Homepage/Categories/Categories";
 import CTA from "@/components/Homepage/Cta/CTA";
 import Features from "@/components/Homepage/Features/Features";
+import Footer from "@/components/Homepage/Footer/Footer";
 import Hero from "@/components/Homepage/Hero/Hero";
 import Offers from "@/components/Homepage/Offers/Offers";
 import Services from "@/components/Homepage/Services/Services";
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <Testimonial />
       <CTA/>
+      <Footer/>
     </>
   )
 }

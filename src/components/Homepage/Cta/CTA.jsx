@@ -5,7 +5,7 @@ import Image from "next/image";
 function CTA() {
   return (
     <section className="my-32 cta_sce">
-      <div className="flex flex-col lg:flex-row gap-24 mx-6 lg:mx-auto max-w-6xl pb-10 ">
+      <div className="flex flex-col lg:flex-row gap-24 mx-6 lg:mx-auto max-w-6xl  ">
         <div className="mx-auto lg:ms-auto relative  ">
           <Image
             src="/images/cta-bg.svg"
