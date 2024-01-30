@@ -13,7 +13,7 @@ function Testimonial() {
         {Datas.map((data, index) => (
           <div key={index} className={`${data.rect_div && data.rect_div}`}>
             <Image
-              className={`lg:${data.p_img_clsnam && data.p_img_clsnam}`}
+              className={`lg:${data.p_img_clsnam && data.p_img_clsnam} `}
               src={data.p_img_src}
               alt="logo"
               width={70}
@@ -55,7 +55,7 @@ const Datas = [
   {
     rect_div: "test_con1",
     p_img_clsnam:
-      "t_img1 absolute top-[10%]  left-[5%] lg:left-[15%]   w-[47px] h-[46px] rounded-full ",
+      "t_img1 absolute top-[10%]  left-[5%] lg:left-[15%]   w-[47px] h-[46px] rounded-full border-[5px] border-[#F6B58B] ",
     p_img_src: "https://picsum.photos/800/600?random=45",
     txt_con_div_cls:
       "test_con absolute z-50 top-[20%] left-[12%] lg:left-[17%] -translate-x-1/2 text-center ",
@@ -68,7 +68,7 @@ const Datas = [
   {
     rect_div: "test_con2",
     p_img_clsnam:
-      "t_img2 absolute top-1/2 left-[35%] lg:left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105px] lg:w-[145px] h-[104px] lg:h-[144px] rounded-full ",
+      "t_img2 absolute top-1/2 left-[35%] lg:left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105px] lg:w-[145px] h-[104px] lg:h-[144px] rounded-full border-[5px] border-[#F86565]",
     p_img_src: "https://picsum.photos/800/600?random=5",
     txt_con_div_cls:
       "test_con  absolute z-50 top-[65%] left-[25%] lg:left-[47%]  ",
@@ -81,7 +81,7 @@ const Datas = [
   {
     rect_div: "test_con3",
     p_img_clsnam:
-      "t_img3 absolute top-[69%] lg:top-[25%] left-[0%] lg:left-[20%]  w-[75px] lg:w-[135px] h-[74px] lg:h-[134px] rounded-full ",
+      "t_img3 absolute top-[69%] lg:top-[25%] left-[0%] lg:left-[20%]  w-[75px] lg:w-[135px] h-[74px] lg:h-[134px] rounded-full border-[5px] border-[#FF9A9A] ",
     p_img_src: "https://picsum.photos/800/600?random=2",
     txt_con_div_cls:
       "test_con absolute z-50 top-[85%] lg:top-[52%] left-[8%]  lg:left-[24%]",
@@ -94,7 +94,7 @@ const Datas = [
   {
     rect_div: "hidden lg:block test_con4",
     p_img_clsnam:
-      "t_img4 absolute top-[60%] left-[4%] lg:left-[10%]  w-[78px] lg:w-[118px] h-[77px] lg:h-[117px]  rounded-full",
+      "t_img4 absolute top-[60%] left-[4%] lg:left-[10%]  w-[78px] lg:w-[118px] h-[77px] lg:h-[117px]  rounded-full border-[5px] border-[#D689F2] ",
     p_img_src: "https://picsum.photos/800/600?random=2",
     txt_con_div_cls:
       "test_con absolute z-50 top-[85%] left-[25%] lg:left-[28%] -translate-x-1/2",
@@ -107,13 +107,13 @@ const Datas = [
   {
     rect_div: " lg:block",
     p_img_clsnam:
-      "hidden lg:block t_img5 absolute top-[37%] left-[2%] lg:top-[65%] lg:left-[25%] lg:left-[35%]  w-[48px] h-[47px] rounded-full",
+      "hidden lg:block t_img5 absolute top-[37%] left-[2%] lg:top-[65%] lg:left-[25%] lg:left-[35%]  w-[48px] h-[47px] rounded-full border-[5px] border-[#FD8F67] ",
     p_img_src: "https://picsum.photos/800/600?random=22",
   },
   {
     rect_div: "test_con5",
     p_img_clsnam:
-      "t_img6 absolute top-[15%] right-[16%]  w-[81px] h-[80px] lg:w-[131px] lg:h-[130px] rounded-full",
+      "t_img6 absolute top-[15%] right-[16%]  w-[81px] h-[80px] lg:w-[131px] lg:h-[130px] rounded-full border-[5px] border-[#C2C84D] ",
     p_img_src: "https://picsum.photos/800/600?random=22",
     txt_con_div_cls:
       "hidden lg:block test_con absolute z-50  top-[42%] left-[77%] ",
@@ -126,13 +126,13 @@ const Datas = [
   {
     rect_div: " lg:block",
     p_img_clsnam:
-      "t_img7 absolute top-[47%] right-[5%] lg:right-[29%]  w-[48px] h-[47px] rounded-full",
+      "t_img7 absolute top-[47%] right-[5%] lg:right-[29%]  w-[48px] h-[47px] rounded-full border-[5px] border-[#EDAC4F] ",
     p_img_src: "https://picsum.photos/800/600?random=22",
   },
   {
     rect_div: "test_con6",
     p_img_clsnam:
-      "t_img8 absolute top-[70%] right-[20%] w-[71px] lg:w-[111px] h-[70px] lg:h-[110px] rounded-full",
+      "t_img8 absolute top-[70%] right-[20%] w-[71px] lg:w-[111px] h-[70px] lg:h-[110px] rounded-full border-[5px] border-[#4DF6E1] ",
     p_img_src: "https://picsum.photos/800/600?random=2",
     txt_con_div_cls:
       "hidden lg:block test_con absolute z-50  top-[92%] left-[73%] ",
