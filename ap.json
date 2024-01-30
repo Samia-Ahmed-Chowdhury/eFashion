@@ -1,0 +1,313 @@
+
+[
+    {
+        "category": "Woman",
+        "subCategory": "Dress",
+        "details": "Superior Women Teal Blue Embellished Dress With Flutte",
+        "price": "65",
+        "rating": "5",
+        "images": [
+          "/images/wdress2-1.png",
+          "/images/wdress2-2.png",
+          "/images/wdress2-3.png",
+          "/images/wdress2-4.png"
+        ],
+        "status": "Tranding"
+      },
+  {
+    "category": "Woman",
+    "subCategory": "Shirts",
+    "details": "Women Summer Transparent Mesh Blouse Shirt Tops Blusas Long Sleeve",
+    "price": "13",
+    "rating": "5",
+    "images": [
+      "/images/wshirts1-1.png",
+      "/images/wshirts1-2.png",
+      "/images/wshirts1-3.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Tops",
+    "details": "Glamour Girl Bow Tie Top With Button",
+    "price": "26",
+    "rating": "4",
+    "images": [
+      "/images/wtops1-1.png",
+      "/images/wtops1-2.png"
+    ],
+    "status": "New Collections"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Saris",
+    "details": "Designer Sarees Fashion for Modern Girls",
+    "price": "43",
+    "rating": "4.8",
+    "images": [
+      "/images/wsaris2-1.png",
+      "/images/wsaris2-2.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Dress",
+    "details": "Women V-Neck Three Quarter Sleeve Long Dress Ladies",
+    "price": "55",
+    "rating": "5",
+    "images": [
+      "/images/wdress1-1.png",
+      "/images/wdress1-2.png",
+      "/images/wdress1-3.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Shirts",
+    "details": "Women Flutter Sleeve Shirt",
+    "price": "33",
+    "rating": "4",
+    "images": [
+      "/images/wshirts3-1.png",
+      "/images/wshirts3-2.png"
+    ],
+    "status": "Offers"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Dress",
+    "details": "Buy Pink Plain Maxi Dress With Knotes ",
+    "price": "60",
+    "rating": "4.2",
+    "images": [
+      "/images/wdress3-1.png",
+      "/images/wdress3-2.png"
+    ],
+    "status": "Offers"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Tops",
+    "details": "Girl neck Tie Top With fashion",
+    "price": "18",
+    "rating": "3.4",
+    "images": [
+      "/images/wtops2-1.png",
+      "/images/wtops2-2.png"
+    ],
+    "status": "Offers"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Dress",
+    "details": "Black color designer evening gown",
+    "price": "37",
+    "rating": "4",
+    "images": [
+      "/images/wdress4-1.png"
+    ],
+    "status": "New Collections"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Skirts",
+    "details": "Indian Red Rust Solid Cotton Skirt Women's Clothing Skirt Girls",
+    "price": "13",
+    "rating": "3.2",
+    "images": [
+      "/images/wskirts1-1.png",
+      "/images/wskirts1-2.png",
+      "/images/wskirts1-3.png"
+    ],
+    "status": "Offers"
+  },
+  {
+    "category": "Woman",
+    "subCategory": "Saris",
+    "details": "Modal Silk Designer Saree In Colour",
+    "price": "13",
+    "rating": "3.2",
+    "images": [
+      "/images/wsaris1-1.png",
+      "/images/wsaris1-2.png",
+      "/images/wsaris1-3.png"
+    ],
+    "status": "New Collections"
+  },
+
+  {
+    "category": "Woman",
+    "subCategory": "Shirts",
+    "details": "Women Maroon Classic Tartan Checks Checked Casual Shirt",
+    "price": "15",
+    "rating": "4.5",
+    "images": [
+      "/images/wshirts2-1.png",
+      "/images/wshirts2-2.png"
+    ],
+    "status": "New Collections"
+  },
+
+  {
+    "category": "Man",
+    "subCategory": "Shirts",
+    "details": "New Shirt Men Fashion Slim Fit Long Sleeve",
+    "price": "28",
+    "rating": "5",
+    "images": [
+      "/images/mshirts2-1.png",
+      "/images/mshirts2-2.png",
+      "/images/mshirts2-3.png",
+      "/images/mshirts2-4.png"
+    ],
+    "status": "Tranding"
+  },
+
+
+  {
+    "category": "Man",
+    "subCategory": "Panjabi",
+    "details": "Light Paste Fashionable Indian Lilen Panjabi For Men",
+    "price": "36",
+    "rating": "4.4",
+    "images": [
+      "/images/mpanjabi1-1.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Man",
+    "subCategory": "Shirts",
+    "details": "MENS CASUAL SHIRT",
+    "price": "18",
+    "rating": "4.6",
+    "images": [
+      "/images/mshirts1-1.png",
+      "/images/mshirts1-2.png",
+      "/images/mshirts1-3.png"
+    ],
+    "status": "New Collections"
+  },
+  {
+    "category": "Man",
+    "subCategory": "T-Shirts",
+    "details": "Men's T-Shirt",
+    "price": "26",
+    "rating": "4.2",
+    "images": [
+      "/images/mtshirts1-1.png",
+      "/images/mtshirts1-2.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Man",
+    "subCategory": "Shirts",
+    "details": "Men Checkered Casual Shirt ",
+    "price": "26",
+    "rating": "4.2",
+    "images": [
+      "/images/mshirts3-1.png",
+      "/images/mshirts3-1.png"
+    ],
+    "status": "Offers"
+  },
+ 
+ 
+
+
+{
+    "category": "Kids",
+    "subCategory": "Dress",
+    "details": "Elegant Lace Party Dress for Girls",
+    "price": "46",
+    "rating": "4.8",
+    "images": [
+      "/images/kdress1-1.png",
+      "/images/kdress1-2.png",
+      "/images/kdress1-3.png",
+      "/images/kdress1-4.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Kids",
+    "subCategory": "T-Shirts",
+    "details": "McQueen The Cars custom kids tshirt",
+    "price": "35",
+    "rating": "3.8",
+    "images": [
+        "/images/ktshirt1-1.png",
+        "/images/ktshirt1-2.png",
+        "/images/ktshirt1-3.png"
+    ],
+    "status": "New Collections"
+  },
+{
+    "category": "Kids",
+    "subCategory": "Dress",
+    "details": "Girls Long Frock in Purple Color Sleeveless Birthday Dress",
+    "price": "76",
+    "rating": "5",
+    "images": [
+      "/images/kdress2-1.png",
+      "/images/kdress2-2.png"
+    ],
+    "status": "Tranding"
+  },
+  {
+    "category": "Kids",
+    "subCategory": "Tops",
+    "details": "Kids shortr tops",
+    "price": "25",
+    "rating": "3.5",
+    "images": [
+        "/images/ktops1-1.png",
+        "/images/ktops1-2.png"
+    ],
+    "status": "Offers"
+  },
+  
+  {
+    "category": "Kids",
+    "subCategory": "Dress",
+    "details": "Superior Kids Teal Blue Embellished Dress With Flutte",
+    "price": "65",
+    "rating": "5",
+    "images": [
+      "/images/wdress2-1.png",
+      "/images/wdress2-2.png",
+      "/images/wdress2-3.png",
+      "/images/wdress2-4.png"
+    ],
+    "status": "New Collections"
+  },
+  {
+    "category": "Kids",
+    "subCategory": "Dress",
+    "details": "kids V-Neck Three Quarter Sleeve Long Dress Ladies",
+    "price": "55",
+    "rating": "5",
+    "images": [
+        "/images/wdress1-2.png",
+        "/images/wdress1-3.png",
+        "/images/wdress1-1.png"
+    ],
+    "status": "Offers"
+  },
+  {
+    "category": "Man",
+    "subCategory": "T-Shirts",
+    "details": "Men's T-Shirt",
+    "price": "26",
+    "rating": "3.2",
+    "images": [
+      "/images/mtshirts2-1.png"
+    ],
+    "status": "Tranding"
+  }
+  
+]
