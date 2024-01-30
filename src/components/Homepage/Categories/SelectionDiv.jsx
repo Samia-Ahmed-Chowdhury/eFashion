@@ -24,8 +24,8 @@ function SelectionDiv() {
         <label htmlFor="switch-cat-radio2">Woman</label>
 
         <input type="radio" id="switch-cat-radio3" name="cat-radio"
-         checked={selectedOption === "Men"}
-         onChange={() => handleSelectOption("Men")}
+         checked={selectedOption === "Man"}
+         onChange={() => handleSelectOption("Man")}
         />
         <label htmlFor="switch-cat-radio3">Man</label>
 
