@@ -1,3 +1,7 @@
+.service_sec{
+overflow-x: hidden;
+}
+
 .service_cards{
     padding:40px 30px;
     height: 380px;

@@ -107,7 +107,7 @@ const Datas = [
   {
     rect_div: "hidden lg:block",
     p_img_clsnam:
-      "hidden lg:block t_img5 absolute top-[65%] left-[25%] lg:left-[35%]  w-[48px] h-[47px] rounded-full",
+      "hidden lg:block t_img5 absolute top-[37%] left-[2%] lg:top-[65%] lg:left-[25%] lg:left-[35%]  w-[48px] h-[47px] rounded-full",
     p_img_src: "https://picsum.photos/800/600?random=22",
   },
   {
@@ -124,9 +124,9 @@ const Datas = [
     p: " customers are life of business.",
   },
   {
-    rect_div: "hidden lg:block",
+    rect_div: " lg:block",
     p_img_clsnam:
-      "t_img7 absolute top-[47%] right-[29%]  w-[48px] h-[47px] rounded-full",
+      "t_img7 absolute top-[47%] right-[5%] lg:right-[29%]  w-[48px] h-[47px] rounded-full",
     p_img_src: "https://picsum.photos/800/600?random=22",
   },
   {
