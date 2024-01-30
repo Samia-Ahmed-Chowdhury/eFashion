@@ -105,7 +105,7 @@ const Datas = [
     p: "Our own self-realization is the greatest service we can render the worlds",
   },
   {
-    rect_div: "hidden lg:block",
+    rect_div: " lg:block",
     p_img_clsnam:
       "hidden lg:block t_img5 absolute top-[37%] left-[2%] lg:top-[65%] lg:left-[25%] lg:left-[35%]  w-[48px] h-[47px] rounded-full",
     p_img_src: "https://picsum.photos/800/600?random=22",
