@@ -117,7 +117,7 @@ function Navbar() {
           </div>
           <div
             tabIndex={0}
-            className="mt-3 z-[1] card card-compact dropdown-content cart_dropdown w-52 bg-base-100 shadow"
+            className="mt-3 z-[100] card card-compact dropdown-content cart_dropdown w-52 bg-base-100 shadow"
           >
             <div className="card-body ">
               <span className="font-bold text-lg text-textC1">

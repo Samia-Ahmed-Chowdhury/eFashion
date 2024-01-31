@@ -14,6 +14,9 @@ import OptionDiv from "@/components/CartPage/OptionDiv";
 
 function Page() {
   const cartData = useSelector((data) => data.cartListData.cartList);
+  const totalItem = cartData.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.quantity;
+  }, 0);
 
   const router = useRouter();
   // const allowed = cartData.find((i) => i._id === item._id && i.img===cartSelectedImg);
@@ -89,7 +92,7 @@ function Page() {
             Your Order
           </h5>
           <p className="text-center text-sm text-textC9">
-            you have {cartData.length && cartData.length} items in shopping cart
+            you have {cartData.length && totalItem} items in shopping cart
           </p>
         </div>
       </div>
